@@ -1,0 +1,136 @@
+%!TEX TS-program = pdflatex
+\documentclass[numbers=noenddot,abstracton]{\scrartclScrreprt}
+
+\usepackage[numbers]{natbib}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{layout}
+\setlength{\parindent}{0em}
+
+\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\arraystretch}{1}
+
+\let\oldmarginpar\marginpar
+\renewcommand{\marginpar}[1]{\-\oldmarginpar[\raggedleft\scriptsize\hspace{0pt}#1]%
+{\raggedright\footnotesize #1}}
+
+%Damit \today ein Deutsch Formatiertes Datum zurueckgibt.  
+\usepackage[ngerman, num, orig]{isodate}
+\usepackage[ngerman]{babel}   
+
+\monthyearsepgerman{\,}{\,} 
+
+\usepackage{amssymb,amsmath,fancybox,graphicx,wrapfig,color,lastpage,fancyhdr,verbatim,epstopdf,a4wide}
+\usepackage{paralist}	%aufzählungen in Tabelle machen
+
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{supertabular}{\tiny }
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{footnote}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{etex}
+\usepackage{pdfpages}
+\usepackage{color} 
+\usepackage{placeins} 
+\usepackage{booktabs}
+
+
+\usepackage[makeroom]{cancel}
+\usepackage{array}
+\usepackage{trfsigns}
+\usepackage{textcomp}
+
+
+% Kompaktes Itemize
+\usepackage{enumitem}
+\newlist{compactitemize}{itemize}{1}
+\setlist[compactitemize]{label=\textbullet, nosep, leftmargin=10pt}
+
+
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pgfplots}
+\pgfplotsset{every axis plot/.style={line width=1pt}}
+\pgfset{number format/1000 sep={}}
+\pgfplotsset{tick label style={/pgf/number format/fixed}}
+\pgfplotsset{scaled ticks=false}
+\pgfplotsset{compat=newest}
+
+\newcommand{\trauthorB}{Philipp Riedel}
+
+\newcommand{\trauthorA}{Armin Stocklin}
+
+\newcommand{\trprof}{Prof. Dr. A. Müller}
+\newcommand{\trfachgebiet}{Mathematisches Seminar}
+\newcommand{\trfakultaet}{Elektrotechnik}
+\newcommand{\trdate}{\today}
+
+\newcommand{\titleinfo}{Optimierung mittels Brechungsgesetz}
+\newcommand{\authorinfo}{\trauthorA, \trauthorB}
+
+\usepackage[hyphens]{url}	%URL handling und darstellung
+\urlstyle{tt}
+
+\usepackage[pdftitle={\titleinfo},
+						pdfauthor={\authorinfo},
+						pdfcreator={TeXStudio, LaTeX with hyperref},
+						plainpages=false,
+						pdfpagelabels,
+						colorlinks,
+						linkcolor=black,
+						filecolor=black,
+						citecolor=black,
+						urlcolor=black]{hyperref}
+
+\usepackage{tabularx}
+
+\renewcommand{\captionfont}{\scriptsize\slshape}
+
+\newcommand{\figref}[1]{Abbildung~\ref{#1}}
+\newcommand{\subfigref}[2]{\figref{#1}.#2}
+\renewcommand{\eqref}[1]{Gleichung~\ref{#1}}
+\newcommand{\tabref}[1]{Tabelle~\ref{#1}}
+\renewcommand{\pageref}[1]{Seite~\ref{#1}}
+\newcommand{\chapref}[1]{Kapitel~\ref{#1}~(\nameref{#1})}
+\newcommand{\secref}[1]{Abschnitt~\ref{#1}}
+\newcommand{\lstref}[1]{Listing~\ref{#1}}
+
+\newcommand{\cditem}[2]{\item[$\blacktriangleright$] \textbf{#1} \\ #2}
+\newcommand{\cdrawitem}[1]{\item[$\blacktriangleright$] \textbf{#1}}
+\newcommand{\cdsubitem}[2]{\item[$\vartriangleright$] \textbf{#1} \\ #2}
+
+\newcommand{\draftmarker}[1]{\colorbox{yellow}{#1}}
+
+\newcommand{\texttodo}[1]{\textcolor{red}{Todo: #1}}
+	
+\setlength{\unitlength}{1mm}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+	
+%Abbildungsnumerierung anhand Kapitel
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\makeatletter \@addtoreset{figure}{section} \makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin define headings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+\lhead[\scriptsize\nouppercase{\leftmark}]{}%\textbf{\titleinfo}}
+\chead[]{}
+\rhead[]{\scriptsize\nouppercase{\leftmark}}%\textbf{\titleinfo}]{}
+
+\lfoot[\scriptsize\thepage]{\scriptsize{}}
+\cfoot[]{}
+\rfoot[\scriptsize{}]{\scriptsize\thepage}
+
+\AtBeginDocument{\numberwithin{equation}{section}} %Damit Gleichungen mit Section Nummer beginnen
+\AtBeginDocument{\numberwithin{figure}{section}}
+\AtBeginDocument{\numberwithin{table}{section}}
+

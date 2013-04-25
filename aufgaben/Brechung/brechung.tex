@@ -1,0 +1,41 @@
+\newcommand{\scrartclScrreprt}{scrartcl}
+\include{header}
+
+% Möglichst keine Ergänzungen hier, sondern in header.tex
+\begin{document} 
+ 
+
+% Römische Nummerierung für Sonderseiten, wie Verzeichnisse und Anhang
+\pagenumbering{Roman}
+
+% Titelblatt
+\input{Titelseite}
+\renewcommand{\abstractname}{Abstract}
+\begin{abstract}
+Beispiel Text
+
+\end{abstract}
+
+\vspace{3cm}
+
+% Inhaltsverzeichnis
+\newpage
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+% Nummerierung von roemisch auf arabisch umschalten und roemische
+% zwischenspeichern
+\newpage
+\newcounter{roemisch}
+\setcounter{roemisch}{\value{page}}
+\pagenumbering{arabic}
+
+
+\input{./aufgabe}
+\input{./theorie}
+\input{./beispiel}
+
+
+\end{document}
+
+
