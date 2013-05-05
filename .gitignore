@@ -1,0 +1,15 @@
+*.aux
+*.log
+*.toc
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.gz
+*.lot
+*.bcf
+*.lof
+*.nlo
+*~
+Thumbs.db
