@@ -1,1 +1,58 @@
-\section{Theorie zu diesem Optimierungs-Verfahren}
+\section{Physikalische Theorie}
+
+\subsection{Fermatsches Prinzip}
+Im Jahre 1660 fand Pierre de Fermat, 
+ein Französischer Mathematiker das, 
+nach ihm benannte, Fermatsche Prinzip heraus. 
+Dieses lautet wie folgt:
+
+%\begin{definition}
+Der Weg, den das Licht nimmt, 
+um von einem Punkt zu einem anderen zu gelangen, 
+ist stets so, dass die benötigte Zeit minimal ist.
+%\index{Fermatsches Prinzip 1}
+%\end{definition}
+
+Mathematisch lautet das Fermatsche Prinzip bei einem Brechungsindex $n$, 
+der Lichtgeschwindigkeit $c$ und dem Weg $s$: 
+Die Zeit
+
+\[
+t= \int_{s_1}^{s_2} \frac{n(s)}{c} ds =
+\frac{1}{c} \int_{s_1}^{s_2} n(s) ds
+\]
+
+muss minimal sein.
+
+Wenn die Zeit minimal ist, 
+wird bei kleinen Abweichungen vom Weg die Zeit nicht viel grösser. 
+Deshalb kann die oben stehende Definition auch wie folgt geschrieben werden.
+
+%\begin{definition}
+Der Weg, den das Licht nimmt, 
+um von einem Punkt zu einem anderen zu gelangen, 
+ist stets so, dass die Zeit, die das Licht benötigt, 
+invariant gegen kleine Änderungen des Weges ist.
+%\index{Fermatsches Prinzip 2}
+%\end{definition}
+
+\subsection{Formulierung mit dem optischen Weg}
+Der optische Weg $L$  eines Pfades $s$ kann in einem homogenen Material 
+mit dem Brechungsindex $n$ als Produkt $L = n \cdot s$ berechnet werden.
+Wenn nun kein homogenes Material vorliegt und die Formel allgemein 
+formuliert werden muss, so ist der optische Pfad $L = \int_{s_1}^{s_2} n(\vec x) \,\mathrm d \vec x$
+Da der zurückgelegte Weg, des Lichtstrahles direkt propotional zur Zeit $s = c \cdot t$ ist,
+kann das Fermatsche Gesetz umformuliert werden.
+
+%\begin{definition}
+Der Weg, den das Licht nimmt, 
+um von einem Punkt zu einem anderen zu gelangen, 
+ist stets so, dass der optische Weg 
+\[
+L(S) = \int_{s_1}^{s_2} n(\vec x) \,\mathrm d\vec x
+\]
+minimal ist.
+%\index{Fermatsches Prinzip 2}
+%\end{definition}
+
+\subsection{Quantenmechanische Erklärung}
