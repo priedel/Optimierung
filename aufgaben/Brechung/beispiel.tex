@@ -5,13 +5,68 @@ Aus dem Fermatschen Prinzip lässt sich das Brechungsgesetz von Snellius herleit
 Das Licht legt den Weg vom Startpunkt $P_0$ über den Brechungspunkt $P_1$ 
 nach dem Endpunkt $P_2$ zurück. Dadurch kann die zurückgelegte Zeit berechnet werden.
 
+
+\fbox{
+ \begin{picture}(85,80)
+  \put(0,40){\line(1,0){85}}
+  \put(0,80){\line(3,-2){60}}
+  \put(60,40){\line(2,-3){26}}
+  \put(0,60){a}
+  \put(0,20){b}
+  \put(43,0){d}
+ \end{picture}
+}
+
 \[
 t(x) =
 t_1 + t_2 =
 \frac{s_1}{c_1} + \frac{s_2}{c_2} =
-a
+\frac{|P_1 - P_0|}{c_1} + \frac{|P_2 - P_1|}{c_2} =
+\frac{\sqrt{a^2 + x^2}}{c_1} + \frac{\sqrt{(d-x)^2 + b^2}}{c_2}
 \]
 
+Leiten wir diese Funktion nun nach $x$ ab, finden wir eine Extremalstelle von $t$.
+
+\[
+0 = 
+\frac{dt}{dx} =
+\frac{2 \cdot x}{c_1 \cdot 2 \cdot \sqrt{a^2 + x^2}} + 
+\frac{-2 \cdot (d-x)}{c_2 \cdot 2 \cdot \sqrt{(d-x)^2 + b^2}} =
+\frac{x}{c_1 \cdot \sqrt{a^2 + x^2}} - 
+\frac{(d-x)}{c_2 \cdot \sqrt{(d-x)^2 + b^2}}
+\]
+
+Aus dem Bild kann man schön sehen, dass $x = \sin(\alpha) \cdot \sqrt{a^2 + x^2}$
+und $d-x = \sin(\beta) \cdot \sqrt{(d -x)^2 + b^2}$
+
+\[
+0 = 
+\frac{\sin(\alpha)}{c_1} - \frac{\sin(\beta)}{c_2} \Leftrightarrow
+\frac{c_1}{c_2} = \frac{\sin(\beta)}{\sin(\alpha)}
+\]
+
+Diese Funktion bis jetzt ist ja schön und gut, 
+jedoch konnte noch nicht nachgewiesen werden, 
+dass die Extremalstelle auch wirklich ein Minimum ist. 
+Deshalb müssen wir nun noch die zweite Ableitung berechnen.
+
+\[
+0 > 
+\frac{dt^2}{d^2x} \left(\frac{\sqrt{a^2 + x^2}}{c_1} + 
+\frac{\sqrt{(d-x)^2 + b^2}}{c_2}\right) =
+\frac{dt}{dx} \left(\frac{x}{c_1 \cdot \sqrt{a^2 + x^2}} - 
+\frac{(d-x)}{c_2 \cdot \sqrt{(d-x)^2 + b^2}} \right) = \phantom a
+\]
+\[
+- \frac{x^2}{c_1 \cdot \sqrt{(a^2 + x^2)}^{3}}
++ \frac{1}{c_1 \cdot \sqrt{a^2 + x^2}}
++ \frac{(d-x)\cdot(x-d)}{c_2 \cdot \sqrt{(b^2 + (d - x)^2)}^{3}}
++ \frac{1}{c_2 \cdot \sqrt{b^2 + (d-x)^2}} = \phantom a
+\]
+\[
+\frac{a^2}{c_1 \cdot \sqrt{(a^2 + x^2)}^{3}}
++ \frac{b^2}{c_2 \cdot \sqrt{(b^2 + (d - x)^2)}^{3}} = \phantom a
+\]
 
 \subsection{Spiegelgesetz}
 Hier kommt das zweite Beispiel.
