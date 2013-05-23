@@ -124,12 +124,113 @@ gespiegelten Endpunkt eine Gerade ist, welche der Funktion des kürzesten Weges 
 %+ \frac{b^2}{c_2 \cdot \sqrt{(b^2 + (d - x)^2)}^{3}} = \phantom a
 %\]
 
-\subsection{Fata Morgana}
+\subsection{Fata Morgana Allgemein}
+
+Bei einer Fata Morgana hat die Luft eine optische Dichte von $n(x,y)$. 
+Dabei bewegt sich das Licht mit der Geschwindigkeit $c/n(x,y)$. 
+Die benötigte Zeit, damit das Licht vom Punkt $(x_0, y_0)$ nach $(x_1, y_1)$ braucht,
+kann mit dem Kurvenintegral berechnet werden.
+
+\begin{equation}
+T(y) = \int \limits_{x_0}^{x_1} \frac{n(x,y)}{c} \sqrt{1 + y'(x)^2} dx
+\end{equation}
+
+Wie es bei einem heissen Tag auf einer Strasse oder in einer Wüste zutrifft,
+nehmen wir zuerst nur einmal an, dass die optische Dicht nur von $y$ abhängt
+(also $n(x,y) = g(y)$) und mit zunehmenden $y$ ebenfalls zunimmt. 
+Mathematisch bedeuted dies:
+
+\begin{equation}
+g(y) > 0 
+\end{equation}
+
+\begin{equation}
+g'(y) > 0
+\end{equation}
+
+Dieses Minimalproblem zu lösen, wird die Euler-Lagrange-Gleichung des Variationsproblems
+
+\begin{equation}
+T(y) = \int \limits_{x_0}^{x_1} \frac{g(y)}{c} \sqrt{1 + y'(x)^2} dx = \frac{1}{c} \int \limits_{x_0}^{x_1} g(y) \sqrt{1 + y'(x)^2} dx
+\end{equation}
+
+aufgestellt. Der Faktor $\frac{1}{c}$ keinen Einfluss auf das Integral und 
+somit auf das Variationproblem hat 
+und er nur ständig mitgeschleppt werden würde, lassen wir ihn weg.
+Es werden nun die Ableitungen der Funktion 
+
+\begin{equation}
+F(x,y,y') = g(y) \sqrt{1 + y'^2}
+\end{equation}
+
+gebraucht und lauten:
+
+\begin{equation}
+\frac{\partial F}{\partial y} = g'(y) \sqrt{1 + y'^2}
+\end{equation}
+
+\begin{equation}
+\frac{\partial F}{\partial y'} = g(y) \frac{y'}{\sqrt{1 + y'^2}}
+\end{equation}
+
+Für die Euler-Lagrange-Gleichung muss man im zweiten Ausdruck $y(x)$ 
+und $y'(x)$ einsetzen und nach $x$ ableiten.
+
+\begin{align}
+\frac{d}{dx} \frac{\partial F}{\partial y'} = \frac{d}{dx} (g(y(x)) \frac{y'(x)}{\sqrt{1 + y'(x)^2}})
+ = g'(y(x)) \frac{y'(x)^2}{\sqrt{1 + y'(x)^2}} + g(y(x)) \frac{y''(x)}{\sqrt{1 + y'(x)^2}} - \notag \\
+g'(y(x)) \frac{y'(x)^2 y''(x)}{(1 + y'(x))^\frac{3}{2}}
+\end{align}
+
+Damit wird die Gleichung zu
+
+\begin{align}
+0 = \frac{d}{dx} \frac{\partial F}{\partial y'} - \frac{\partial F}{\partial y} = 
+g'(y(x)) \frac{y'(x)^2}{\sqrt{1 + y'(x)^2}} + g(y(x)) \frac{y''(x)}{\sqrt{1 + y'(x)^2}} - \notag \\
+g'(y(x)) \frac{y'(x)^2 y''(x)}{(1 + y'(x))^\frac{3}{2}}  - g'(y(x)) \sqrt{1 + y'(x)^2}
+\end{align}
+
+Wenn man zu dieser Gleichung mit $\sqrt{1 + y'(x)^2} > 0$ multipliziert, 
+ändert sich nichts und sie kann einfacher geschrieben werden.
+
+\begin{align}
+0 = g'(y(x)) y'(x)^2 + g(y(x)) y''(x) - g'(y(x)) \frac{y'(x)^2 y''(x)}{(1 + y'(x)^2)} - \notag \\ g'(y(x)) (1 + y'(x)^2)
+\end{align}
+
+Da $g(y(x)) > 0$, kann man obige Gleichung zusätzlich noch durch $g(y(x))$ dividieren.
+
+\begin{align}
+\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2) - \frac{g'(y(x))}{g(y(x))} y'(x)^2 =  y''(x) - \frac{y'(x)^2 y''(x)}{(1 + y'(x)^2)} \notag \\
+\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2 - y'(x)^2) = \frac{\left(1 + y'(x)^2 \right)y''(x) - y'(x)^2 y''(x)}{(1 + y'(x)^2)} \notag \\
+\frac{g'(y(x))}{g(y(x))} = \frac{y''(x) + y'(x)^2 y''(x) - y'(x)^2 y''(x)}{(1 + y'(x)^2)} = \frac{y''(x)}{(1 + y'(x)^2)}
+\end{align}
+
+Gemäss den Definitionen von ganz am Anfang von diesem Beispiel ist die linke Seite positiv. 
+Zudem ist der Nenner der rechte Seite ebenfalls positiv, woraus resultiert, dass der Zähler 
+der rechten Seite ebenfalls positiv sein muss.
+
+\begin{align}
+\frac{g'(y(x))}{g(y(x))} > 0 \wedge (1 + y'(x)^2) > 0 \Rightarrow y''(x) > 0
+\end{align}
+
+Da die zweite Ableitung positiv ist, muss die Funktion Funktion des Lichtstrahles konvex sein.
+Dies bedeuted, dass der Lichtstrahl sich über dem Boden nach oben biegt, 
+ganz egal wie die Funktion von $g(x)$ aussieht, solange sie monoton steigend ist.
+Daraus kann aber auch die Schlussfolgerung gezogen werden, dass der Lichtstrahl konkav sein muss, 
+wenn die Funktion $g(x)$ monoton fallend ist. 
+In einem Lichtwellenleiter wird dieses Phänomen ausgenutzt, indem die untere Seite des Lichtleiters eine monoton steigende
+nd die obere Seite des Lichtleiters eine monoton fallende Funktion ist. 
+Dadurch ist dass Licht dann im Leiter gefangen und kann nicht über einen Rand hinausgehen.
+
+\subsection{Fata Morgana Spezifisch}
+
 \begin{figure}[H]
 	\includegraphics[width=0.8\textwidth]{./picture/FataMorgana.pdf}
 	\caption{Skizze der Funktion einer Fata Morgana}
 	\label{Ab:fata}
 \end{figure}
+
+
 Wir nehmen an, wir hätten eine Fata Morgana. 
 Dabei hat der Brechungsindex die Funktion nach \eqref{brechungsindexFunktion} in Abhängigkeit von $y$ 
 (Der Höhe über dem Boden).
