@@ -124,7 +124,32 @@ gespiegelten Endpunkt eine Gerade ist, welche der Funktion des kürzesten Weges 
 %+ \frac{b^2}{c_2 \cdot \sqrt{(b^2 + (d - x)^2)}^{3}} = \phantom a
 %\]
 
-\subsection{Fata Morgana Allgemein}
+\subsection{Fata Morgana}
+\cite{fataEinleitung}
+Bei der physikalischen Betrachtung der Lichtausbreitung geht man davon aus, daß sich Licht in
+geradlinig verlaufenden Strahlen fortpflanzt und das Auge das Objekt, von dem die Lichtstrahlen
+kommen, in rückwärtiger geradliniger Verlängerung der Richtung erwartet, die das Licht beim
+Eintritt in das Auge besitzt.
+Ändert sich die Richtung des Lichtes beispielsweise dadurch, daß es auf dem Weg zum Auge Medien
+verschiedener Brechungsindizes durchquert, kommt es infolgedessen zu jenen paradox erscheinenden
+Situationen, die man z.B. von "zerbrochenen" Löffel M Wasserglas oder den verkürzten Beinen im
+Schwimmbad kennt.
+Eine besonders komplizierte Situation liegt vor, wenn der Brechungsindex des durchstrahlten Mediums kontinuierlich variiert. Dies ist z.B. der Fall,
+wenn die Luft in der Nähe eines stark aufgeheizten Untergrundes, etwa einer Asphaltstraße, erwärmt
+wird und infolge der dadurch bewirkten Dichteänderung einen räumlichen variierenden Brechungs-
+index annimmt. Das Licht erfährt dadurch entsprechende Ablenkungen und führt zu Phänomenen, die
+uns als Luftspiegelungen an heißen Tagen vertraut sind. \figref{Ab:fataEinleitung} 
+
+\begin{figure}[H]
+	\includegraphics[width=0.4\textwidth]{./picture/FataEinleitung.png}
+	\caption{Das Auge "geht" davon aus, daß die "gebo-
+	genen" Lichtstrahlen aus der tangentialen Verlänge-
+	rung kommen und "sieht" dort das Bild.}
+	\label{Ab:fataEinleitung}
+\end{figure}
+
+
+\subsubsection{Fata Morgana Allgemein}
 
 Bei einer Fata Morgana hat die Luft eine optische Dichte von $n(x,y)$. 
 Dabei bewegt sich das Licht mit der Geschwindigkeit $c/n(x,y)$. 
@@ -187,7 +212,7 @@ Damit wird die Gleichung zu
 \begin{align}
 0 = \frac{d}{dx} \frac{\partial F}{\partial y'} - \frac{\partial F}{\partial y} = 
 g'(y(x)) \frac{y'(x)^2}{\sqrt{1 + y'(x)^2}} + g(y(x)) \frac{y''(x)}{\sqrt{1 + y'(x)^2}} - \notag \\
-g'(y(x)) \frac{y'(x)^2 y''(x)}{(1 + y'(x))^\frac{3}{2}}  - g'(y(x)) \sqrt{1 + y'(x)^2}
+g'(y(x)) \frac{y'(x)^2 y''(x)}{(1 + y'(x)^2)^\frac{3}{2}}  - g'(y(x)) \sqrt{1 + y'(x)^2}
 \end{align}
 
 Wenn man zu dieser Gleichung mit $\sqrt{1 + y'(x)^2} > 0$ multipliziert, 
@@ -202,7 +227,7 @@ Da $g(y(x)) > 0$, kann man obige Gleichung zusätzlich noch durch $g(y(x))$ divi
 \begin{align}
 \frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2) - \frac{g'(y(x))}{g(y(x))} y'(x)^2 =  y''(x) - \frac{y'(x)^2 y''(x)}{(1 + y'(x)^2)} \notag \\
 \frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2 - y'(x)^2) = \frac{\left(1 + y'(x)^2 \right)y''(x) - y'(x)^2 y''(x)}{(1 + y'(x)^2)} \notag \\
-\frac{g'(y(x))}{g(y(x))} = \frac{y''(x) + y'(x)^2 y''(x) - y'(x)^2 y''(x)}{(1 + y'(x)^2)} = \frac{y''(x)}{(1 + y'(x)^2)}
+\frac{g'(y(x))}{g(y(x))} = \frac{y''(x) + y'(x)^2 y''(x) - y'(x)^2 y''(x)}{(1 + y'(x)^2)} = \frac{y''(x)}{1 + y'(x)^2}
 \end{align}
 
 Gemäss den Definitionen von ganz am Anfang von diesem Beispiel ist die linke Seite positiv. 
@@ -210,19 +235,19 @@ Zudem ist der Nenner der rechte Seite ebenfalls positiv, woraus resultiert, dass
 der rechten Seite ebenfalls positiv sein muss.
 
 \begin{align}
-\frac{g'(y(x))}{g(y(x))} > 0 \wedge (1 + y'(x)^2) > 0 \Rightarrow y''(x) > 0
+\frac{g'(y(x))}{g(y(x))} > 0 \qquad \wedge \qquad (1 + y'(x)^2) > 0 \qquad \Rightarrow \qquad y''(x) > 0
 \end{align}
 
-Da die zweite Ableitung positiv ist, muss die Funktion Funktion des Lichtstrahles konvex sein.
+Da die zweite Ableitung positiv ist, muss die Funktion des Lichtstrahles konvex sein.
 Dies bedeuted, dass der Lichtstrahl sich über dem Boden nach oben biegt, 
 ganz egal wie die Funktion von $g(x)$ aussieht, solange sie monoton steigend ist.
 Daraus kann aber auch die Schlussfolgerung gezogen werden, dass der Lichtstrahl konkav sein muss, 
 wenn die Funktion $g(x)$ monoton fallend ist. 
 In einem Lichtwellenleiter wird dieses Phänomen ausgenutzt, indem die untere Seite des Lichtleiters eine monoton steigende
-nd die obere Seite des Lichtleiters eine monoton fallende Funktion ist. 
+und die obere Seite des Lichtleiters eine monoton fallende Funktion ist. 
 Dadurch ist dass Licht dann im Leiter gefangen und kann nicht über einen Rand hinausgehen.
 
-\subsection{Fata Morgana Spezifisch}
+\subsubsection{Fata Morgana Spezifisch}
 
 \begin{figure}[H]
 	\includegraphics[width=0.8\textwidth]{./picture/FataMorgana.pdf}
