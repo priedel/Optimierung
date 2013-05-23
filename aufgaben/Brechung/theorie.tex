@@ -2,7 +2,7 @@
 
 \subsection{Fermatsches Prinzip}
 Im Jahre 1660 fand Pierre de Fermat, 
-ein Französischer Mathematiker das, 
+ein Französischer Mathematiker, das 
 nach ihm benannte, Fermatsche Prinzip heraus. 
 Dieses lautet wie folgt:
 
@@ -15,18 +15,16 @@ ist stets so, dass die benötigte Zeit minimal ist.
 %\index{Fermatsches Prinzip 1}
 %\end{definition}
 
-Mathematisch lautet das Fermatsche Prinzip bei einem Brechungsindex $n$, 
-der Lichtgeschwindigkeit $c$, dem Weg $s$ und dem Ort $r$: 
+Die \eqref{fermat} zeigt das Fermatsche Prinzip bei einem Brechungsindex $n$, 
+der Lichtgeschwindigkeit $c$, dem Weg $s$ und dem Ort $r$ Die Zeit muss minimal sein.
 
-Die Zeit
-\[
-t= \int_{s_1}^{s_2} \frac{n(r)}{c} ds =
-\frac{1}{c} \int_{s_1}^{s_2} n(r) ds
-\]
-muss minimal sein.
+\begin{equation}
+	t= \int_{s_1}^{s_2} \frac{n(r)}{c} ds = \frac{1}{c} \int_{s_1}^{s_2} n(r) ds
+	\label{fermat}
+\end{equation}
 
-Wenn die Zeit minimal ist, 
-wird bei kleinen Abweichungen vom Weg die Zeit nicht viel grösser. 
+
+Wenn die Zeit minimal ist, wird bei kleinen Abweichungen vom Weg die Zeit nicht viel grösser. 
 Deshalb kann die oben stehende Definition auch wie folgt geschrieben werden.
 
 %\begin{definition}
@@ -39,61 +37,59 @@ invariant gegen kleine Änderungen des Weges ist.
 
 \subsection{Formulierung mit dem optischen Weg}
 Der optische Weg $L$  eines Pfades $s$ kann in einem homogenen Material 
-mit dem Brechungsindex $n$ als Produkt $L = n \cdot s$ berechnet werden.
-Wenn nun kein homogenes Material vorliegt und die Formel allgemein 
-formuliert werden muss, so ist der optische Pfad $L = \int_{s_1}^{s_2} n(r) \,\mathrm d \vec s$
-Da der zurückgelegte Weg, des Lichtstrahles direkt propotional zur Zeit $s = c \cdot t$ ist,
+mit dem Brechungsindex $n$ als Produkt von $n$ und $s$ berechnet werden.
+Bei einem inhomogenen Material ergibt sich für den optische Pfad die allgemeine \eqref{optischweg}.
+\begin{equation}
+	L(s) = \int\limits_{s_1}^{s_2} n(r) \,\mathrm d\vec s 
+	\label{optischweg}
+\end{equation}
+
+Da der zurückgelegte Weg, des Lichtstrahles direkt proportional zur Zeit $s = c \cdot t$ ist,
 kann das Fermatsche Gesetz umformuliert werden.
+
 
 %\begin{definition}
 Der Weg, den das Licht nimmt, 
 um von einem Punkt zu einem anderen zu gelangen, 
-ist stets so, dass der optische Weg 
-\[
-L(s) = \int_{s_1}^{s_2} n(r) \,\mathrm d\vec s
-\]
-minimal ist.
+ist stets so, dass der optische Weg minimal ist.
+
 %\index{Fermatsches Prinzip 2}
 %\end{definition}
 
 \subsection{Eikonalgleichung}
 
 Aus dem Fermatschen Prinzip lässt sich die Eikonalgleichung herleiten.
-Dabei ist der liefert jede Weglängenstück $ds$ folgenden Beitrag an den optischen Weg $dL$. 
-Es ergibt sich folgende Formel:
+Dabei liefert jedes Weglängenstück $ds$ folgenden Beitrag an den optischen Weg $dL$. 
+Dabei ergibt sich \eqref{eikonalHerleitung}.
 
-\[
-dL = n \cdot ds = n e_t \cdot dr
-\]
+\begin{equation}
+	dL = n \cdot ds = n e_t \cdot dr
+	\label{eikonalHerleitung}
+\end{equation}
 
-Dabei ist der tangentielle Einheitsvektor der Trajektorie $e_t$ wie folgt definiert.
+Dabei ist der tangentielle Einheitsvektor der Trajektorie $e_t$ nach  \eqref{et} definiert.
 
-\[
-e_t = \partial r / ds
-\]
+\begin{equation}
+	e_t = \partial r / ds
+	\label{et}
+\end{equation}
 
-Die optische Wegstücke $dL$ können auch wie folgt definiert werden, 
+Die optische Wegstücke $dL$ können auch wie folgt \texttodo{was definiert werden} definiert werden, 
 und es ergeben sich folgende Gleichungen.
 
-\[
-dL = \nabla L \cdot dr
-\]
+\begin{align}
+	dL = \nabla L \cdot dr \notag \\
+	n e_t = n \frac{dr}{ds} = \nabla L \notag \\
+	n^2 = (\nabla L)^2 \label{eikongleichung}
+\end{align}
 
-\[
-n e_t = n \frac{dr}{ds} = \nabla L
-\]
+\eqref{eikongleichung} nennt sich Eikonalgleichung.
+Durch Ableitung der Eikonalgleichung ergibt sich \eqref{strahlen} die wichtige Strahlengleichung der Optik.
 
-\[
-n^2 = (\nabla L)^2
-\]
-
-Die letzte Gleichung nennt sich Eikonalgleichung.
-Differenzieren wir nun diese Eikonalgleichung, 
-dann erhalten noch die wichtige Strahlengleichung der Optik.
-
-\[
-\frac{d}{ds} \left ( n \frac{dr}{ds} \right ) = \nabla n
-\]
+\begin{equation}
+	\frac{d}{ds} \left ( n \frac{dr}{ds} \right ) = \nabla n
+	\label{strahlen}
+\end{equation}
 
 \subsection{Quantenmechanische Erklärung}
 Viele Leute haben ein Problem mit dem Fermatschen Prinzip. 
@@ -101,7 +97,7 @@ Der Grund ist ganz einfach.
 Bei der ``klassischen'' Strahlenoptik geht das Licht einen bestimmten Weg, 
 sieht einen Spiegel oder eine Oberfläche, bricht sich dort nach einem 
 physikalischen Gesetz und geht dann weiter.
-Der philosophische Ansatz voim Fermatschen Prinzip ist anders. 
+Der philosophische Ansatz vom Fermatschen Prinzip ist anders. 
 Es wird davon ausgegangen, 
 dass das Licht, bevor es einen Weg einschlägt, 
 weiss wohin es muss und wo ein Spiegel oder eine Oberfläche kommt und 
