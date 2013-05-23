@@ -1,41 +1,42 @@
 \section{Rechnung an einem Konkreten Beispiels}
 
-\subsection{Brechungsgesetz von Snellius}
-\cite{Wikipedia}Aus dem Fermatschen Prinzip lässt sich das Brechungsgesetz von Snellius herleiten.
+\subsection{Brechungsgesetz von Snellius \label{brechungsgesetz}}
+\cite{Wikipedia} Aus dem Fermatschen Prinzip lässt sich das Brechungsgesetz von Snellius herleiten.
 Das Licht legt den Weg vom Startpunkt $P_0$ über den Brechungspunkt $P_1$ 
-nach dem Endpunkt $P_2$ zurück. Dadurch kann die zurückgelegte Zeit berechnet werden.
+nach dem Endpunkt $P_2$ zurück, siehe \figref{Ab:brechung}.
+\begin{figure}[H]
+	\includegraphics[width=0.8\textwidth]{./picture/Brechung.pdf}
+	\caption{Skizze des Brechungsgesetzes von Snellius}
+	\label{Ab:brechung}
+\end{figure}
 
-\includegraphics{./picture/Brechung.pdf}
+Dadurch kann die zurückgelegte Zeit berechnet werden, siehe \eqref{snelliusT}.
+\begin{align}
+t(x) = t_1 + t_2 = \frac{s_1}{c_1} + \frac{s_2}{c_2} = \frac{|P_1 - P_0|}{c_1} + \frac{|P_2 - P_1|}{c_2} \notag \\
+= \frac{\sqrt{a^2 + x^2}}{c_1} + \frac{\sqrt{(d-x)^2 + b^2}}{c_2} \label{snelliusT}
+\end{align}
+
+Leiten wir diese Funktion nun nach $dx$ ab, finden wir eine \texttodo{die ? Extrem....} Extremastelle von $t$, siehe \eqref{snelliusDx}.
+\begin{align}
+	\frac{dt}{dx} = \frac{2 \cdot x}{2 \cdot c_1 \cdot \sqrt{a^2 + x^2}} + \frac{-2 \cdot (d-x)}{2 \cdot c_2 \cdot \sqrt{(d-x)^2 + b^2}} = \notag \\
+	\frac{x}{c_1 \cdot \sqrt{a^2 + x^2}} - \frac{(d-x)}{c_2 \cdot \sqrt{(d-x)^2 + b^2}} = 0 \label{snelliusDx}
+\end{align}
+
+Aus \figref{Ab:brechung} ist gut ersichtlich das folgende Substitutionen \ref{substitution} durchgeführt werden können
+
+\begin{align}
+	x = \sin(\alpha) \cdot \sqrt{a^2 + x^2} \notag \\
+	d-x = \sin(\beta) \cdot \sqrt{(d -x)^2 + b^2} \label{substitution}
+\end{align}
 
 
+\texttodo{sehr grosser sprung, aufwändig zum nachvollziehen, zwischenschritte einfügen}
+daraus ergibt sich das Verhältnis gemäss \eqref{snellius}.
+\begin{equation}
+	0 = \frac{\sin(\alpha)}{c_1} - \frac{\sin(\beta)}{c_2} \Leftrightarrow\frac{c_2}{c_1} = \frac{\sin(\beta)}{\sin(\alpha)}
+	\label{snellius}
+\end{equation}
 
-\[
-t(x) =
-t_1 + t_2 =
-\frac{s_1}{c_1} + \frac{s_2}{c_2} =
-\frac{|P_1 - P_0|}{c_1} + \frac{|P_2 - P_1|}{c_2} =
-\frac{\sqrt{a^2 + x^2}}{c_1} + \frac{\sqrt{(d-x)^2 + b^2}}{c_2}
-\]
-
-Leiten wir diese Funktion nun nach $x$ ab, finden wir eine Extremalstelle von $t$.
-
-\[
-0 = 
-\frac{dt}{dx} =
-\frac{2 \cdot x}{2 \cdot c_1 \cdot \sqrt{a^2 + x^2}} + 
-\frac{-2 \cdot (d-x)}{2 \cdot c_2 \cdot \sqrt{(d-x)^2 + b^2}} =
-\frac{x}{c_1 \cdot \sqrt{a^2 + x^2}} - 
-\frac{(d-x)}{c_2 \cdot \sqrt{(d-x)^2 + b^2}}
-\]
-
-Aus dem Bild kann man schön sehen, dass $x = \sin(\alpha) \cdot \sqrt{a^2 + x^2}$
-und $d-x = \sin(\beta) \cdot \sqrt{(d -x)^2 + b^2}$
-
-\[
-0 = 
-\frac{\sin(\alpha)}{c_1} - \frac{\sin(\beta)}{c_2} \Leftrightarrow
-\frac{c_2}{c_1} = \frac{\sin(\beta)}{\sin(\alpha)}
-\]
 
 %Diese Funktion bis jetzt ist ja schön und gut, 
 %jedoch konnte noch nicht nachgewiesen werden, 
@@ -61,45 +62,44 @@ und $d-x = \sin(\beta) \cdot \sqrt{(d -x)^2 + b^2}$
 %\]
 
 \subsection{Reflexionsgesetz}
-\cite{Wikipedia}Genau gleich wie aus dem Fermatschen Prinzip das Brechungsgesetz herleiten liess, 
+\cite{Wikipedia} Auf gleiche weise wie das das Brechungsesetz aus dem Fermatschen Prinzip hergeleitet wird, 
 lässt sich daraus auch das Reflexionsgesetz ableiten.
 Das Licht legt den Weg vom Startpunkt $P_0$ über den Spiegelpunkt $P_1$ 
-nach dem Endpunkt $P_2$ zurück. Dadurch kann die zurückgelegte Zeit berechnet werden.
-
-\includegraphics{./picture/Spiegelung.pdf}
+nach dem Endpunkt $P_2$ zurück. Dadurch kann die zurückgelegte Zeit berechnet werden, siehe \eqref{reflexion}.
 
 
-\[
-t(x) =
-t_1 + t_2 =
-\frac{s_1 + s_2}{c} =
-\frac{|P_1 - P_0| + |P_2 - P_1|}{c} =
-\frac{\sqrt{a^2 + x^2} + \sqrt{(d-x)^2 + b^2}}{c}
-\]
 
-Leiten wir diese Funktion nun nach $x$ ab, finden wir eine Extremalstelle von $t$.
+\begin{align}
+t(x) = t_1 + t_2 = \frac{s_1 + s_2}{c} = \frac{|P_1 - P_0| + |P_2 - P_1|}{c} \notag \\
+= \frac{\sqrt{a^2 + x^2} + \sqrt{(d-x)^2 + b^2}}{c} \label{reflexion}
+\end{align}
 
-\[
-0 = 
-\frac{dt}{dx} =
-\frac{1}{c} \cdot
-\frac{2 \cdot x}{2 \cdot \sqrt{a^2 + x^2}} + 
-\frac{-2 \cdot (d-x)}{2 \cdot \sqrt{(d-x)^2 + b^2}} =
-\frac{x}{ \sqrt{a^2 + x^2}} - 
-\frac{(d-x)}{ \sqrt{(d-x)^2 + b^2}}
-\]
+$t(x)$ nach $dx$ abgeleitet ergibt eine Extremalstelle  von $t$, siehe \eqref{reflexionDx}.
 
-Aus dem Bild kann man schön sehen, dass $x = \sin(\alpha) \cdot \sqrt{a^2 + x^2}$
-und $d-x = \sin(\beta) \cdot \sqrt{(d -x)^2 + b^2}$
+\begin{align}
+\frac{dt}{dx} = \frac{1}{c} \cdot \frac{2 \cdot x}{2 \cdot \sqrt{a^2 + x^2}} + \frac{-2 \cdot (d-x)}{2 \cdot \sqrt{(d-x)^2 + b^2}} \notag \\
+= \frac{x}{ \sqrt{a^2 + x^2}} - \frac{(d-x)}{ \sqrt{(d-x)^2 + b^2}} \label{reflexionDx}
+\end{align}
 
-\[
-0 = \sin(\alpha) - \sin(\beta) \Leftrightarrow
-sin(\beta) = \sin(\alpha) \Leftrightarrow
-\beta = \alpha
-\]
+\begin{figure}[H]
+	\includegraphics[width=0.8\textwidth]{./picture/Spiegelung.pdf}
+	\caption{Skizze des Reflexionsgesetzes}
+	\label{Ab:spiegelung}
+\end{figure}
 
-Im Bild oben kann man schön sehen, dass Linie des Startpunktes bis zum 
-gespiegelten Endpunkt eine Gerade ist. Eine Gerade ist immer die Funktion mit dem kürzestem Weg.
+Aus \figref{Ab:spiegelung} ist gut ersichtlich das die Substitution \ref{substitution}  von \secref{brechungsgesetz} auch hier nützlich ist.
+
+
+\texttodo{sehr grosser sprung, aufwändig zum nachvollziehen, zwischenschritte einfügen}
+daraus ergibt sich das Eintritts- und Austrittswinkel gleich sind, siehe \eqref{brechung}.
+
+
+\begin{equation}
+0 = \sin(\alpha) - \sin(\beta) \Leftrightarrow \sin(\beta) = \sin(\alpha) \Leftrightarrow\beta = \alpha
+\end{equation}
+
+In \figref{Ab:spiegelung} ist ersichtlich, dass die Linie des Startpunktes bis zum 
+gespiegelten Endpunkt eine Gerade ist, welche der Funktion des kürzesten Weges entspricht.
 
 %Diese Funktion bis jetzt ist ja schön und gut, 
 %jedoch konnte noch nicht nachgewiesen werden, 
@@ -125,56 +125,59 @@ gespiegelten Endpunkt eine Gerade ist. Eine Gerade ist immer die Funktion mit de
 %\]
 
 \subsection{Fata Morgana}
-
-\includegraphics{./picture/FataMorgana.pdf}
-
+\begin{figure}[H]
+	\includegraphics[width=0.8\textwidth]{./picture/FataMorgana.pdf}
+	\caption{Skizze der Funktion einer Fata Morgana}
+	\label{Ab:fata}
+\end{figure}
 Wir nehmen an, wir hätten eine Fata Morgana. 
-Dabei hat der Brechungsindex folgende Funktion in Abhängigkeit von $y$ 
+Dabei hat der Brechungsindex die Funktion nach \eqref{brechungsindexFunktion} in Abhängigkeit von $y$ 
 (Der Höhe über dem Boden).
 
-\[
-n = n_0 (1 - \varepsilon e^{- \alpha y})
-\]
+\begin{equation}
+	n = n_0 (1 - \varepsilon e^{- \alpha y})
+	\label{brechungsindexFunktion}
+\end{equation}
 
+\texttodo{welcher effekt ist relativ klein?}
 Dabei ist der Effekt relativ klein, da $\epsilon << 1$ ist und 
 die Skalenlänge $\alpha$ in der Grössenordnung von $\alpha = 1 \cdot m^{-1}$ ist.
-Zusätzlich können wir für die Skalierung der x-Richtung die konstante $C$ einführen,
-welche wie folgt definiert ist:
+Zusätzlich können wir für die Skalierung der x-Richtung die nach \eqref{lichtge} definierte konstante $C$ einführen.
 
-\[
-C = n \frac{dx}{ds}
-\]
+\begin{equation}
+	C = n \frac{dx}{ds}
+	\label{lichtge}
+\end{equation}
 
-Nun betrachten wir die Strahlengleichung komponentenweise für $r = (y(x), x)$ 
-und können daraus die Strahlengleichung aufschreiben und vereinfachen.
+Wenn die Strahlengleichung komponentenweise für $r = (y(x), x)$ betrachten wird kann daraus die Strahlengleichung, \eqref{strahlengleichung}, hergeleitet werden.
 
-\[
-\frac{d}{ds} \left ( n \frac{dy}{ds} \right ) =
-\frac{d}{dx} \left ( n \frac{dy}{dx} \frac{dx}{ds} \right ) \frac{dx}{ds} =
-\frac{d}{dx} \left ( C \frac{dy}{dx} \right ) \frac{C}{n} =
-\frac{\partial n(y)}{\partial y}
-\]
+\begin{equation}
+\frac{d}{ds} \left ( n \frac{dy}{ds} \right ) = \frac{d}{dx} \left ( n \frac{dy}{dx} \frac{dx}{ds} \right ) \frac{dx}{ds} =
+\frac{d}{dx} \left ( C \frac{dy}{dx} \right ) \frac{C}{n} = \frac{\partial n(y)}{\partial y}
+\label{strahlengleichung}
+\end{equation}
 
-Da die Konstante $C$ nur die x-Achse skaliert, wählen wir diese mit dem Wert $1$.
-Wegen $2 n \partial n / \partial y = \partial n^2 / \partial y$ und 
-$n^2 \simeq n_0^2(1 - 2 \varepsilon e^{-\alpha y})$ erhalten wir folgende Gleichung.
+Da die Konstante $C$ nur die x-Achse skaliert, wird diese auf den Wert $1$ festgelegt.
+Wegen 
+\texttodo{stimmt diese gleichung? $2 n \partial n / \partial y = \partial n^2 / \partial y$ meiner meinung nach geht da faktor 2 verloren, ist aber schon spät in der Nacht}
+\begin{equation}
+	2 n \partial n / \partial y = \partial n^2 / \partial y \qquad \text{und} \qquad n^2 \simeq n_0^2(1 - 2 \varepsilon e^{-\alpha y}) \notag
+\end{equation}erhalten wir \eqref{difGleich}.
 
-\[
-\frac{d^2 y(x)}{dx^2} =
-\frac{1}{2} \frac{\partial}{\partial y} n^2(y) =
-n_0^2 \varepsilon \alpha e^{-\alpha y}
-\]
+\begin{equation}
+	\frac{d^2 y(x)}{dx^2} = \frac{1}{2} \frac{\partial}{\partial y} n^2(y) = n_0^2 \varepsilon \alpha e^{-\alpha y}
+	\label{difGleich}
+\end{equation}
 
-Diese Gleichung können wir mit elementaren Methoden gelöst werden. 
-Zudem führen wir den Steigungswinkel $\varphi$ ein und schreiben mit 
-$\kappa = (\frac{\alpha}{2}) \tan(\varphi)$ können wir die Gleichung einfacher schreiben.
+Diese Gleichung kann mit elementaren Methoden gelöst werden. 
+Zudem wird der Steigungswinkel $\varphi$ eingeführt daraus ergibt sich
+$\kappa = (\frac{\alpha}{2}) \tan(\varphi)$ daraus ergibt sich die übersichtlichere \eqref{fataFunktion}.
+\texttodo{verständlich beschreiben mit zwischen schritten damit sich die diffgleichung und die funktion die gefunden wird ersichtlich sind}
+\begin{equation}
+	y = y_0 + \frac{1}{\alpha} ln(\cosh^2(\kappa(x - x_0))) \xrightarrow{\kappa (x - x_0 ) >> 1} y =	y_0 + \frac{2 \kappa}{\alpha} (x - x_0)
+	\label{fataFunktion}
+\end{equation}
 
-\[
-y =
-y_0 + \frac{1}{\alpha} ln(\cosh^2(\kappa(x - x_0))) \xrightarrow{\kappa (x - x_0 ) >> 1}
-y =
-y_0 + \frac{2 \kappa}{\alpha} (x - x_0)
-\]
 
 In grossen Abständen zum Spiegelpunkt $x_0$ ist die Ausbreitung des Lichtes geradlinig.
 Der Beobachter sieht, wie erwarted zwei Bilder, wobei eines auf dem Kopf steht.
