@@ -10,28 +10,36 @@ nach dem Endpunkt $P_2$ zurück, siehe \figref{Ab:brechung}.
 	\label{Ab:brechung}
 \end{figure}
 
-Dadurch kann die zurückgelegte Zeit berechnet werden, siehe \eqref{snelliusT}.
+Dadurch kann die zurückgelegte Zeit berechnet werden (\eqref{snelliusT}).
 \begin{align}
 t(x) = t_1 + t_2 = \frac{s_1}{c_1} + \frac{s_2}{c_2} = \frac{|P_1 - P_0|}{c_1} + \frac{|P_2 - P_1|}{c_2} \notag \\
 = \frac{\sqrt{a^2 + x^2}}{c_1} + \frac{\sqrt{(d-x)^2 + b^2}}{c_2} \label{snelliusT}
 \end{align}
 
-Leiten wir diese Funktion nun nach $dx$ ab, finden wir eine \texttodo{die ? Extrem....} Extremastelle von $t$, siehe \eqref{snelliusDx}.
+Wird diese Funktion nach $dx$ abgeleitet und gleich Null gesetzt wird die Extremastelle von $t$ gefunden (\eqref{snelliusDx}). Diese Extremastelle ist ein globales Minima, auf den Beweis mittels zweiter Ableitung wird hier verzichtet.
 \begin{align}
 	\frac{dt}{dx} = \frac{2 \cdot x}{2 \cdot c_1 \cdot \sqrt{a^2 + x^2}} + \frac{-2 \cdot (d-x)}{2 \cdot c_2 \cdot \sqrt{(d-x)^2 + b^2}} = \notag \\
-	\frac{x}{c_1 \cdot \sqrt{a^2 + x^2}} - \frac{(d-x)}{c_2 \cdot \sqrt{(d-x)^2 + b^2}} = 0 \label{snelliusDx}
+	\frac{x}{c_1 \cdot \sqrt{a^2 + x^2}} - \frac{(d-x)}{c_2 \cdot \sqrt{(d-x)^2 + b^2}} = 0 \label{snelliusDx}\\
 \end{align}
-
-Aus \figref{Ab:brechung} ist gut ersichtlich das folgende Substitutionen \ref{substitution} durchgeführt werden können
 
 \begin{align}
-	x = \sin(\alpha) \cdot \sqrt{a^2 + x^2} \notag \\
-	d-x = \sin(\beta) \cdot \sqrt{(d -x)^2 + b^2} \label{substitution}
+\sqrt{b^2 + (d - x)^2}
 \end{align}
 
+%$c_2=2 \cdot c_1 \qquad a=1 \qquad b=2a \qquad d=1 \qquad \frac{1}{c2 \Sqrt{b^2 + (d - x)^2}} - \frac{(d - x)^2 }{c2 (b^2 + (d - x)^2)^(3/2)} - \frac{x^2}{c1 (a^2 + x^2)^(3/2)}$
+%$ + \frac{1}{c1 \Sqrt{1^2 + x^2}} = y  \qquad   x_0 = 0.190898 y =\frac{1.14688}{c1} > 0$ minimum da einzige extremal punkt kandidat auch globales
 
-\texttodo{sehr grosser sprung, aufwändig zum nachvollziehen, zwischenschritte einfügen}
-daraus ergibt sich das Verhältnis gemäss \eqref{snellius}.
+
+
+Aus \figref{Ab:brechung} ist gut ersichtlich das die Substitutionen \ref{substitution1} und \ref{substitution2} durchgeführt werden können,
+
+\begin{align}
+	\sin(\alpha) = \frac{x}{\cdot \sqrt{a^2 + x^2}}  \label{substitution1}\\
+	\sin(\beta) = \frac{d-x}{\sqrt{(d -x)^2 + b^2}} \label{substitution2}
+\end{align}
+
+Nach etwas umformen ergibt sich, das Verhältnis der Winkel $\alpha \ \text{und} \ \beta$ gemäss (\eqref{snellius}).
+
 \begin{equation}
 	0 = \frac{\sin(\alpha)}{c_1} - \frac{\sin(\beta)}{c_2} \Leftrightarrow\frac{c_2}{c_1} = \frac{\sin(\beta)}{\sin(\alpha)}
 	\label{snellius}
@@ -65,8 +73,7 @@ daraus ergibt sich das Verhältnis gemäss \eqref{snellius}.
 \cite{Wikipedia} Auf gleiche weise wie das das Brechungsesetz aus dem Fermatschen Prinzip hergeleitet wird, 
 lässt sich daraus auch das Reflexionsgesetz ableiten.
 Das Licht legt den Weg vom Startpunkt $P_0$ über den Spiegelpunkt $P_1$ 
-nach dem Endpunkt $P_2$ zurück. Dadurch kann die zurückgelegte Zeit berechnet werden, siehe \eqref{reflexion}.
-
+nach dem Endpunkt $P_2$ zurück. Dadurch kann die zurückgelegte Zeit berechnet werden (\eqref{reflexion}).
 
 
 \begin{align}
@@ -74,11 +81,11 @@ t(x) = t_1 + t_2 = \frac{s_1 + s_2}{c} = \frac{|P_1 - P_0| + |P_2 - P_1|}{c} \no
 = \frac{\sqrt{a^2 + x^2} + \sqrt{(d-x)^2 + b^2}}{c} \label{reflexion}
 \end{align}
 
-$t(x)$ nach $dx$ abgeleitet ergibt eine Extremalstelle  von $t$, siehe \eqref{reflexionDx}.
+Wenn $t(x)$ nach $dx$ abgeleitet und gleich 0 gesetzt wird ergibt sich die Extremalstelle  von $t$ (\eqref{reflexionDx}).
 
 \begin{align}
 \frac{dt}{dx} = \frac{1}{c} \cdot \frac{2 \cdot x}{2 \cdot \sqrt{a^2 + x^2}} + \frac{-2 \cdot (d-x)}{2 \cdot \sqrt{(d-x)^2 + b^2}} \notag \\
-= \frac{x}{ \sqrt{a^2 + x^2}} - \frac{(d-x)}{ \sqrt{(d-x)^2 + b^2}} \label{reflexionDx}
+= \frac{x}{ \sqrt{a^2 + x^2}} - \frac{(d-x)}{ \sqrt{(d-x)^2 + b^2}} = 0 \label{reflexionDx}
 \end{align}
 
 \begin{figure}[H]
@@ -87,15 +94,13 @@ $t(x)$ nach $dx$ abgeleitet ergibt eine Extremalstelle  von $t$, siehe \eqref{re
 	\label{Ab:spiegelung}
 \end{figure}
 
-Aus \figref{Ab:spiegelung} ist gut ersichtlich das die Substitution \ref{substitution}  von \secref{brechungsgesetz} auch hier nützlich ist.
-
-
-\texttodo{sehr grosser sprung, aufwändig zum nachvollziehen, zwischenschritte einfügen}
-daraus ergibt sich das Eintritts- und Austrittswinkel gleich sind, siehe \eqref{brechung}.
+In \figref{Ab:spiegelung} ist ersichtlich, dass die Substitutionen \ref{substitution1} und \ref{substitution2} von \secref{brechungsgesetz} auch hier nützlich sind.
+Nach etwas umformen ergibt sich, dass Eintritts- und Austrittswinkel gleich sind (\eqref{brechung}).
 
 
 \begin{equation}
 0 = \sin(\alpha) - \sin(\beta) \Leftrightarrow \sin(\beta) = \sin(\alpha) \Leftrightarrow\beta = \alpha
+\label{brechung}
 \end{equation}
 
 In \figref{Ab:spiegelung} ist ersichtlich, dass die Linie des Startpunktes bis zum 
