@@ -1,4 +1,7 @@
-\section{Fata Morgana und Berechnungen mittels Euler-Lagrange Gleichung}
+\section{Berechnungen mittels Euler-Lagrange Gleichung}
+\subsection{Einleitung}
+Einige Probleme lassen sich direkt lösen indem sie in die hergeleitete Euler-Lagrange-Gleichung eingesetzt werden können. Andere Optimierungsprobleme bei denen eine Funktion gesucht wird, können gelöst werden indem sie das Prinzip der Variation von der Euler-Lagrange-Gleichung benutzen, dazu reicht jedoch nicht mehr ein einfaches einsetzen sondern es muss eine neue Gleichung hergeleitet werden. Die gesuchte Funktion wird dann gefunden indem für $g(y)$ und $g'(y)$ konkret $y(x)$ und $y'(x)$ eingesetzt wird. Aber dazu später noch mehr.
+
 \subsection{Beschreibung einer Fata Morgana}
 \cite{fataEinleitung}
 Bei der physikalischen Betrachtung der Lichtausbreitung geht man davon aus, dass sich Licht in
@@ -44,10 +47,10 @@ Um dieses Minimalproblem zu lösen, wird die Euler-Lagrange-Gleichung des Variat
 \end{equation}
 
 Der Faktor $\frac{1}{c}$ hat keinen Einfluss auf das Integral und somit auch nicht auf das Variationproblem, deshalb kann er weggelassen werden, um ihn nicht ständig mitschleppen zu müssen.
-Es werden nun die Ableitungen der Funktion \ref{lagrangeFunk} gebraucht. Sie sind in \ref{ableitungenLag} aufgeführt.
+Es werden nun die Ableitungen der Funktion \ref{funktionRech} gebraucht. Sie sind in \ref{ableitungenLag} aufgeführt.
 \begin{equation}
 	F(x,y,y') = g(y) \sqrt{1 + y'^2}
-	\label{lagrangeFunk}
+	\label{funktionRech}
 \end{equation}
 
 \begin{align}
@@ -102,7 +105,12 @@ Der Nenner der rechte Seite ist ebenfalls positiv, daraus resultiert, dass der Z
 
 Da die zweite Ableitung positiv ist, muss die Funktion des Lichtstrahles konvex sein.
 Dies bedeuted, dass der Lichtstrahl sich über dem Boden nach oben biegt, ganz egal wie die Funktion von $g(x)$ aussieht, solange sie monoton steigend ist.
-Daraus kann die verallgemeinerte Schlussfolgerung gezogen werden, dass der Lichtstrahl konkav sein muss, wenn die Funktion $g(x)$ monoton \texttodo{nur fallend?} fallend ist. 
+Daraus kann die verallgemeinerte Schlussfolgerung gezogen werden, dass der Lichtstrahl konkav sein muss, wenn die Funktion $g(x)$ monoton fallend ist.
+\begin{definition}
+Ein Lichtstrahl wird in einem inhomogenen Medium in Richtung höherer Dichte gekrümmt, verhält sich die Dichteänderung monoton fallend oder steigend, nimmt der Lichtstrahl eine konvexe oder konkave Kurvenform an.
+\index{Krümmung von Lichtstrahlen}
+\end{definition}
+
 \subsubsection{Technische Anwendung dieser Erkenntnis}
 In einem Lichtwellenleiter wird dieses Phänomen ausgenutzt, indem die untere Seite des Lichtleiters eine monoton steigende
 und die obere Seite des Lichtleiters eine monoton fallende Funktion ist. 
@@ -110,9 +118,36 @@ Dadurch ist dass Licht dann im Leiter ''gefangen'' und kann nicht über einen Ra
 
 \subsection{Berechnung der Differentialgleichung einer Fata Morgana}
 
+eine änderung von x wird vernachlässigt da die Krümmung auf der Erdoberfläche vernachlässigbar ist
+\begin{align}
+\frac{n(x,y)}{c} \rightarrow \frac{g(y)}{c}
+T(y) = \int \limits_{x_0}^{x_1} \frac{g(y)}{c} \cdot \textbf{ ??? } dx \notag \\
+F(x,y,y') = g(y) \cdot \textbf{ ??? } \notag
+\end{align}
 
+Falls bei \textbf{???} nichts mehr kommt wäre die partielle Ableitung nach $y'$ = 0
+\begin{align}
+\frac{\partial F}{\partial y} = g'(y)\notag \\
+\frac{\partial F}{\partial y'} = 0 \notag 
+\end{align}
+\begin{align}
+g(y) \  und \ g'(y) \ durch \ y = m\cdot x + b \ und \ y' = m \ ersetzen \ \notag \\
+\frac{d}{dx} \frac{\partial F}{\partial y'} = 0 \notag \\
+	0 = \frac{d}{dx} \frac{\partial F}{\partial y'} - \frac{\partial F}{\partial y} = m
+\end{align}
 
+Was nicht sein kann.
+Meine Frage:
+muss ich bei \textbf{???} ebenfalls $\sqrt{1 + y'^2}$ für das Kurven Integral einsetzen da es sich um eine Krümmung handelt 
+ich hätte dann
+\begin{align}
+	\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2) - \frac{g'(y(x))}{g(y(x))} y'(x)^2 =  y''(x) - \frac{y'(x)^2 y''(x)}{(1 + y'(x)^2)} \notag \\
+	\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2 - y'(x)^2) = \frac{\left(1 + y'(x)^2 \right)y''(x) - y'(x)^2 y''(x)}{(1 + y'(x)^2)} \notag \\
+	\frac{g'(y(x))}{g(y(x))} = \frac{y''(x) + y'(x)^2 y''(x) - y'(x)^2 y''(x)}{(1 + y'(x)^2)} = \frac{y''(x)}{1 + y'(x)^2} \notag
+\end{align}
+und würde in $y(x) = m\cdot x + b \ und \ y(x)' = m$
 
+oder mache ich irgend etwas grundsätzlich falsch?
 
 
 \subsection{Fata Morgana Spezifisch}
