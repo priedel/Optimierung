@@ -1,5 +1,17 @@
 \newcommand{\scrartclScrreprt}{scrartcl}
+
 \include{header}
+
+
+% referenzen definitionen
+\newcommand{\figref}[1]{Abbildung~\ref{#1}}
+\renewcommand{\eqref}[1]{Gleichung~\ref{#1}}
+\newcommand{\tabref}[1]{Tabelle~\ref{#1}}
+\renewcommand{\pageref}[1]{Seite~\ref{#1}}
+\newcommand{\chapref}[1]{Kapitel~\ref{#1}~(\nameref{#1})}
+\newcommand{\secref}[1]{Abschnitt~\ref{#1}}
+
+
 
 % Möglichst keine Ergänzungen hier, sondern in header.tex
 \begin{document} 
