@@ -57,8 +57,8 @@ Es werden nun die Ableitungen der Funktion \ref{funktionRech} gebraucht. Sie sin
 \end{equation}
 
 \begin{align}
-	\frac{\partial F}{\partial y} = g'(y) \sqrt{1 + y'^2} \notag \\
-	\frac{\partial F}{\partial y'} = g(y) \frac{y'}{\sqrt{1 + y'^2}}
+	\frac{\partial F}{\partial y} &= g'(y) \sqrt{1 + y'^2} \notag \\
+	\frac{\partial F}{\partial y'} &= g(y) \frac{y'}{\sqrt{1 + y'^2}}
 	\label{ableitungenLag}
 \end{align}
 
@@ -66,8 +66,8 @@ Für die Euler-Lagrange-Gleichung muss man im zweiten Ausdruck für $y$ und $y'$
 sowie $y'(x)$ einsetzen und nach $\frac{d}{dx}$ ableiten, (\eqref{lagrange1}).
 
 \begin{align}
-	\frac{d}{dx} \frac{\partial F}{\partial y'} = \frac{d}{dx} (g(y(x)) \frac{y'(x)}{\sqrt{1 + y'(x)^2}})
-	 = g'(y(x)) \frac{y'(x)^2}{\sqrt{1 + y'(x)^2}} + g(y(x)) \frac{y''(x)}{\sqrt{1 + y'(x)^2}} - \notag \\
+	\frac{d}{dx} \frac{\partial F}{\partial y'} = \frac{d}{dx} (g(y(x)) \frac{y'(x)}{\sqrt{1 + y'(x)^2}}) =
+	 \notag \\ g'(y(x)) \frac{y'(x)^2}{\sqrt{1 + y'(x)^2}} + g(y(x)) \frac{y''(x)}{\sqrt{1 + y'(x)^2}} -
 	 g'(y(x)) \frac{y'(x)^2 y''(x)}{(1 + y'(x))^\frac{3}{2}} 
 	 \label{lagrange1}
 \end{align}
@@ -90,9 +90,10 @@ Da $\sqrt{1 + y'(x)^2} > 0$ und somit nicht gleich Null ist kann die Gleichung m
 Auch $g(y(x))$ ist nicht gleich Null, da nach eingangs erfolgter Definition $g(y(x)) > 0$, eine Division mit $g(y(x))$ ist somit zulässig, (\eqref{lagrange4}).
 
 \begin{align}
-	\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2) - \frac{g'(y(x))}{g(y(x))} y'(x)^2 =  y''(x) - \frac{y'(x)^2 y''(x)}{1 + y'(x)^2} \notag \\
-	\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2 - y'(x)^2) = \frac{\left(1 + y'(x)^2 \right)y''(x) - y'(x)^2 y''(x)}{1 + y'(x)^2} \notag \\
-	\frac{g'(y(x))}{g(y(x))} = \frac{y''(x) + y'(x)^2 y''(x) - y'(x)^2 y''(x)}{1 + y'(x)^2} = \frac{y''(x)}{1 + y'(x)^2}
+	\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2) - \frac{g'(y(x))}{g(y(x))} y'(x)^2 &=  y''(x) - \frac{y'(x)^2 y''(x)}{1 + y'(x)^2} \notag \\
+	\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2 - y'(x)^2) &= \frac{\left(1 + y'(x)^2 \right)y''(x) - y'(x)^2 y''(x)}{1 + y'(x)^2} \notag \\
+	\frac{g'(y(x))}{g(y(x))} = \frac{y''(x) + y'(x)^2 y''(x) - y'(x)^2 y''(x)}{1 + y'(x)^2} &= \frac{y''(x)}{1 + y'(x)^2}\notag \\
+	\frac{g'(y(x))}{g(y(x))} &= \frac{y''(x)}{1 + y'(x)^2}
 	\label{lagrange4}
 \end{align}
 
@@ -123,7 +124,7 @@ Dadurch ist das Licht dann im Leiter ''gefangen'' und kann nicht über einen Ran
 Für die gesuchte Differentialgleichung der Fata Morgana nehmen wir wie bei der Krümung an das die optische Dichtung nur $y$ abhängt. Durch die geringe Krümmung der Erde kann die $x$ Richtung vernachlässigt werden.
 $n(x,y) = g(y)$ und mit zunehmenden $y$ zunimmt. Dies bedeutet wie für die Funktion $g(y)$ wie in \secref{sec:Krümmung}, dass $g(y) > 0$ und $g'(y) > 0 $ ist.
 
-Die Euler-Lagrange-Gleichung wird gleich wie in \secref{sec:Krümmung} berechnet. Bei \eqref{lagrange4} wird weiter gerechnet. In (\eqref{lagrang4repet}) werden alle Terme auf die linke Seite genommen.
+Die Euler-Lagrange-Gleichung wird gleich wie in \secref{sec:Krümmung} berechnet. Bei \eqref{lagrange4} wird weiter gerechnet. In (\eqref{diffgleichung1}) werden alle Terme auf die linke Seite genommen.
 \begin{align}
 	g(y(x)\cdot y''(x)-g'(y(x)\cdot y'(x)^2 - g'(y(x)) =0 
 	\label{diffgleichung1}
@@ -137,7 +138,62 @@ $g(y(x))$ ist unsere Funktion des Brechungsindex $n(y)$. Mit dieser Substitution
 
 In \secref{sec:Krümmung} war die anfangs definiert worden das die Dichte ab dem Boden richtung $y$ zunimmt weil die Temperatur über dem Boden von dem heissen Untergrund mehr erhitzt ist als in höheren Lagen. Wird jetzt diese Temperaturabnahme als linear angenommen, gilt \eqref{einsetzGl1} und deren Ableitung (\eqref{einsetzGl2}).
 \begin{align}
-	n(y)=my+b \label{einsetzGl} \\
-	n'(y)=m \label{einsetzGl2}
+	n(y)&=my+b \label{einsetzGl1} \\
+	n'(y)&=m \label{einsetzGl2}
+\end{align}
+
+Um die Differentiation Gleichung zu lösen, kann für $y$ eine hyperbolische Funktion gewählt werden (\eqref{hyperFunk}).
+\begin{align}
+	y&=A\cdot\cosh(Bx+C)+D \label{hyperFunk} \\
+	y'&= A\cdot B\cdot sinh(B x + C) \label{hyperFunkDx} \\
+	y''&= A\cdot B^2\cdot cosh(B x + C) \label{hyperFunkD2x}
+\end{align}
+
+
+\subsubsection{Eine Beispiel Aufgabe}
+
+Folgende Annahmen gelten:
+
+%\begin{tabularx}{\textwidth}{XX}
+%	$y_0=y_1=2 m$ & Augenhöhe und Startpunkt \\
+%	$-x_0=x_1 = 200m$ & Temperatur Luft auf Augenhöhe \\
+%	$T_A=333.15 K$ & Temperatur des Aspalt \\
+%	$T_L=293.15 K$ & Temperatur Luft auf Augenhöhe \\
+%	$-x_0=x_1 = 200m$ & Temperatur Luft auf Augenhöhe \\
+%\end{tabularx}
+
+\begin{align}
+	y_0=y_1=2 m \qquad& Augenhöhe und Startpunkt \\
+	-x_0=x_1 = 200m \qquad& Temperatur Luft auf Augenhöhe \\
+	T_A=333.15 K \qquad& Temperatur des Aspalt \\
+	T_L=293.15 K \qquad& Temperatur Luft auf Augenhöhe \\
+	-x_0=x_1 = 200m \qquad& Temperatur Luft auf Augenhöhe \\
+\end{align}
+
+Daraus ergeben sich mit \eqref{brechTemp} eine Funktion für den Brechungsindex von Luft in abhängigkeit von Temperatur.
+\begin{align}
+	n=1+0.000293\frac{T_0}{T}
+	\label{brechTemp}
+\end{align}
+Daraus ergeben sich die werte in \eqref{nParam} für unsere lineare gleichung $n(y)=my+b$
+\begin{align}
+	y&=y_0=y_1 \notag \\
+	b&=n_A=1+0.000293\frac{273.15 K}{333.15 K} = 1.00024 \notag \\
+	n_L&=1+0.000293\frac{273.15 K}{293.15 K} = 1.00027 \notag \\
+	m&=\frac{\delta n}{y}=\frac{n_L-n_A}{y}=1.64*10^{-5} \notag \\
+	n(y)&=my+b=1.64*10^{-5}y +1.00024
+	\label{nParam}
+\end{align}
+
+Als erstes die allgemeine Form mit einsetzen von $n,n',y',y''$ (\eqref{HauptGl}).
+\begin{align}
+	(my_0+b)A\cdot B^2\cdot cosh(B x_0 + C)-m (A\cdot B\cdot sinh(B x_0 + C))^2-m &= 0\notag \\
+	(my_1+b)A\cdot B^2\cdot cosh(B x_1 + C)-m (A\cdot B\cdot sinh(B x_1 + C))^2-m &=0 \label{HauptGl}
+\end{align}
+
+Da wir $y_0$ und $y_1$ gleich haben und $-x_0=x_1$ eine Achsenspieglung und Cosinus Hyperbolicus Funktion eine gerade Funktion ist lässt sich (\eqref{HauptGl}) vereinfachen (\eqref{glvereinfacht}). Dabei wird $C$ weggelassen.
+\begin{align}
+	(my_0+b)A\cdot B^2\cdot cosh(B x_0 )-m (A\cdot B\cdot sinh(B x_0 ))^2-m &= 0\notag \\
+	(my_1+b)A\cdot B^2\cdot cosh(B x_1 )-m (A\cdot B\cdot sinh(B x_1 ))^2-m &=0 \label{glvereinfacht}
 \end{align}
 
