@@ -23,20 +23,21 @@ Eintritt in das Auge besitzt. In \figref{Ab:fataEinleitung} wird die Wahrnehmung
 \end{figure}
 
 
-\subsection{Untersuchung der Krümmungseigenschaften bei einer räumlichen Dichteänderung}
+\subsection{Untersuchung der Krümmungs-Eigenschaften bei einer räumlichen Dichteänderung \label{sec:Krümmung}}
 
 Bei einer Fata Morgana hat die Luft eine optische Dichte von $n(x,y)$. 
 Dabei bewegt sich das Licht mit der Geschwindigkeit $c/n(x,y)$. 
 Die benötigte Zeit, damit das Licht vom Punkt $(x_0, y_0)$ nach $(x_1, y_1)$ braucht,
-kann mit dem Kurvenintegral berechnet werden.
+kann mit dem Kurvenintegral berechnet werden (\eqref{funktionTy}).
 
 \begin{equation}
-T(y) = \int \limits_{x_0}^{x_1} \frac{n(x,y)}{c} \sqrt{1 + y'(x)^2} dx
+	T(y) = \int \limits_{x_0}^{x_1} \frac{n(x,y)}{c} \sqrt{1 + y'(x)^2} dx
+	\label{funktionTy}
 \end{equation}
 
 Wie es bei einem heissen Tag auf einer Strasse oder in einer Wüste zutrifft,
-nehmen wir zuerst nur einmal an, dass die optische Dicht nur von $y$ abhängt
-(also $n(x,y) = g(y)$) und mit zunehmenden $y$ ebenfalls zunimmt. 
+nehmen wir zuerst nur einmal an, dass die optische Dicht nur von $y$ abhängt,
+$n(x,y) = g(y)$ und mit zunehmenden $y$ zunimmt.
 Dies bedeutet für die Funktion $g(y)$, dass $g(y) > 0$ und $g'(y) > 0 $ ist.
 
 Um dieses Minimalproblem zu lösen, wird die Euler-Lagrange-Gleichung des Variationsproblems aufgestellt (\eqref{krümmung}).
@@ -80,17 +81,16 @@ Auch im zweiten Term der Euler-Lagrange-Gleichung wird für $y'$ $y'(x)$ eingese
 Da $\sqrt{1 + y'(x)^2} > 0$ und somit nicht gleich Null ist kann die Gleichung mit $\sqrt{1 + y'(x)^2}$  multipliziert werden um einen einfacheren Ausdruck zu bekommen, (\eqref{lagrange3}).
 
 \begin{align}
-	0 = g'(y(x)) y'(x)^2 + g(y(x)) y''(x) - g'(y(x)) \frac{y'(x)^2 y''(x)}{(1 + y'(x)^2)} - \notag \\ 
-	g'(y(x)) (1 + y'(x)^2)
+	0 = g'(y(x)) y'(x)^2 + g(y(x)) y''(x) - g'(y(x)) \frac{y'(x)^2 y''(x)}{1 + y'(x)^2} - g'(y(x)) (1 + y'(x)^2)
 	\label{lagrange3}
 \end{align}
 
 Auch $g(y(x))$ ist nicht gleich Null, da nach eingangs erfolgter Definition $g(y(x)) > 0$, eine Division mit $g(y(x))$ ist somit zulässig, (\eqref{lagrange4}).
 
 \begin{align}
-	\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2) - \frac{g'(y(x))}{g(y(x))} y'(x)^2 =  y''(x) - \frac{y'(x)^2 y''(x)}{(1 + y'(x)^2)} \notag \\
-	\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2 - y'(x)^2) = \frac{\left(1 + y'(x)^2 \right)y''(x) - y'(x)^2 y''(x)}{(1 + y'(x)^2)} \notag \\
-	\frac{g'(y(x))}{g(y(x))} = \frac{y''(x) + y'(x)^2 y''(x) - y'(x)^2 y''(x)}{(1 + y'(x)^2)} = \frac{y''(x)}{1 + y'(x)^2}
+	\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2) - \frac{g'(y(x))}{g(y(x))} y'(x)^2 =  y''(x) - \frac{y'(x)^2 y''(x)}{1 + y'(x)^2} \notag \\
+	\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2 - y'(x)^2) = \frac{\left(1 + y'(x)^2 \right)y''(x) - y'(x)^2 y''(x)}{1 + y'(x)^2} \notag \\
+	\frac{g'(y(x))}{g(y(x))} = \frac{y''(x) + y'(x)^2 y''(x) - y'(x)^2 y''(x)}{1 + y'(x)^2} = \frac{y''(x)}{1 + y'(x)^2}
 	\label{lagrange4}
 \end{align}
 
@@ -118,34 +118,23 @@ Dadurch ist dass Licht dann im Leiter ''gefangen'' und kann nicht über einen Ra
 
 \subsection{Berechnung der Differentialgleichung einer Fata Morgana}
 
-eine änderung von x wird vernachlässigt da die Krümmung auf der Erdoberfläche vernachlässigbar ist
+Für die gesuchte Differentialgleichung der Fata Morgana nehmen wir wie bei der Krümung an das die optische Dichtung nur $y$ abhängt. Durch die geringe Krümmung der Erde kann die $x$ Richtung vernachlässigt werden.
+$n(x,y) = g(y)$ und mit zunehmenden $y$ zunimmt. Dies bedeutet wie für die Funktion $g(y)$ wie in \secref{sec:Krümmung}, dass $g(y) > 0$ und $g'(y) > 0 $ ist.
+
+Einstieg nach Umformung bei \eqref{lagrange4} hier nochmal ohne zwischen Terme (\eqref{lagrang4repet})
 \begin{align}
-\frac{n(x,y)}{c} \rightarrow \frac{g(y)}{c}
-T(y) = \int \limits_{x_0}^{x_1} \frac{g(y)}{c} \cdot \textbf{ ??? } dx \notag \\
-F(x,y,y') = g(y) \cdot \textbf{ ??? } \notag
+	\frac{g'(y(x))}{g(y(x))} = \frac{y''(x)}{1 + y'(x)^2}
+	\label{lagrang4repet}
 \end{align}
 
-Falls bei \textbf{???} nichts mehr kommt wäre die partielle Ableitung nach $y'$ = 0
+Wir nehmen in $y$ Richtung eine lineare zunahme der Dichte an. In \eqref{einsetzGl} sind die einzusetzende Gleichung $y(x)$ und deren Ableitung.
 \begin{align}
-\frac{\partial F}{\partial y} = g'(y)\notag \\
-\frac{\partial F}{\partial y'} = 0 \notag 
-\end{align}
-\begin{align}
-g(y) \  und \ g'(y) \ durch \ y = m\cdot x + b \ und \ y' = m \ ersetzen \ \notag \\
-\frac{d}{dx} \frac{\partial F}{\partial y'} = 0 \notag \\
-	0 = \frac{d}{dx} \frac{\partial F}{\partial y'} - \frac{\partial F}{\partial y} = m
+	y(x)=mx+b \notag \\
+	y'(x)=m
+	\label{einsetzGl}
 \end{align}
 
-Was nicht sein kann.
-Meine Frage:
-muss ich bei \textbf{???} ebenfalls $\sqrt{1 + y'^2}$ für das Kurven Integral einsetzen da es sich um eine Krümmung handelt 
-ich hätte dann
-\begin{align}
-	\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2) - \frac{g'(y(x))}{g(y(x))} y'(x)^2 =  y''(x) - \frac{y'(x)^2 y''(x)}{(1 + y'(x)^2)} \notag \\
-	\frac{g'(y(x))}{g(y(x))} (1 + y'(x)^2 - y'(x)^2) = \frac{\left(1 + y'(x)^2 \right)y''(x) - y'(x)^2 y''(x)}{(1 + y'(x)^2)} \notag \\
-	\frac{g'(y(x))}{g(y(x))} = \frac{y''(x) + y'(x)^2 y''(x) - y'(x)^2 y''(x)}{(1 + y'(x)^2)} = \frac{y''(x)}{1 + y'(x)^2} \notag
-\end{align}
-und würde in $y(x) = m\cdot x + b \ und \ y(x)' = m$
+???? mail und würde in $y(x) = m\cdot x + b \ und \ y(x)' = m$
 
 oder mache ich irgend etwas grundsätzlich falsch?
 
