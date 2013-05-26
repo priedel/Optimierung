@@ -123,21 +123,21 @@ Dadurch ist das Licht dann im Leiter ''gefangen'' und kann nicht über einen Ran
 Für die gesuchte Differentialgleichung der Fata Morgana nehmen wir wie bei der Krümung an das die optische Dichtung nur $y$ abhängt. Durch die geringe Krümmung der Erde kann die $x$ Richtung vernachlässigt werden.
 $n(x,y) = g(y)$ und mit zunehmenden $y$ zunimmt. Dies bedeutet wie für die Funktion $g(y)$ wie in \secref{sec:Krümmung}, dass $g(y) > 0$ und $g'(y) > 0 $ ist.
 
-Einstieg nach Umformung bei \eqref{lagrange4} hier nochmal ohne zwischen Terme (\eqref{lagrang4repet})
+Die Euler-Lagrange-Gleichung wird gleich wie in \secref{sec:Krümmung} berechnet. Bei \eqref{lagrange4} wird weiter gerechnet. In (\eqref{lagrang4repet}) werden alle Terme auf die linke Seite genommen.
 \begin{align}
-	\frac{g'(y(x))}{g(y(x))} = \frac{y''(x)}{1 + y'(x)^2}
-	\label{lagrang4repet}
+	g(y(x)\cdot y''(x)-g'(y(x)\cdot y'(x)^2 - g'(y(x)) =0 
+	\label{diffgleichung1}
 \end{align}
 
-Wir nehmen in $y$ Richtung eine lineare zunahme der Dichte an. In \eqref{einsetzGl} sind die einzusetzende Gleichung $y(x)$ und deren Ableitung.
+$g(y(x))$ ist unsere Funktion des Brechungsindex $n(y)$. Mit dieser Substitution ergibt sich differentiationsgleichung (\eqref{diffgleichung2}).
 \begin{align}
-	y(x)=mx+b \notag \\
-	y'(x)=m
-	\label{einsetzGl}
+	n\cdot y''-n'\cdot (y')^2 - n' =0 
+	\label{diffgleichung2}
 \end{align}
 
-???? mail und würde in $y(x) = m\cdot x + b \ und \ y(x)' = m$
-
-oder mache ich irgend etwas grundsätzlich falsch?
-
+In \secref{sec:Krümmung} war die anfangs definiert worden das die Dichte ab dem Boden richtung $y$ zunimmt weil die Temperatur über dem Boden von dem heissen Untergrund mehr erhitzt ist als in höheren Lagen. Wird jetzt diese Temperaturabnahme als linear angenommen, gilt \eqref{einsetzGl1} und deren Ableitung (\eqref{einsetzGl2}).
+\begin{align}
+	n(y)=my+b \label{einsetzGl} \\
+	n'(y)=m \label{einsetzGl2}
+\end{align}
 
