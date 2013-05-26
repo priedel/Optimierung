@@ -17,19 +17,20 @@ t(x) = t_1 + t_2 = \frac{s_1}{c_1} + \frac{s_2}{c_2} = \frac{|P_1 - P_0|}{c_1} +
 \end{align}
 
 Wird diese Funktion nach $dx$ abgeleitet und gleich Null gesetzt wird, die Extremastelle von $t$ gefunden (\eqref{snelliusDx}).
-\begin{equation}
-	\frac{dt}{dx} = \frac{2 \cdot x}{2 \cdot c_1 \cdot \sqrt{a^2 + x^2}} + \frac{-2 \cdot (d-x)}{2 \cdot c_2 \cdot \sqrt{(d-x)^2 + b^2}} =
-	\frac{x}{c_1 \cdot \sqrt{a^2 + x^2}} - \frac{(d-x)}{c_2 \cdot \sqrt{(d-x)^2 + b^2}} = 0 \label{snelliusDx}\\
-\end{equation}
-
-Eine weitere Ableitung und einsetzen von $x_0$, welches beim berechnen von (\eqref{snelliusDx}) gefunden wird, zeigt ob ein lokales Maxima oder Minima vorliegt.
 \begin{align}
-\text{mit} c_2=2 \cdot c_1 \qquad a=1 \qquad b=2a \qquad d=1 \textbf{ist} x_0 = 0.190898 \notag \\
-\frac{dt}{d^2x}=\frac{1}{c2 \sqrt{b^2 + (d - x)^2}} - \frac{(d - x)^2 }{c2 (b^2 + (d - x)^2)^(3/2)} \notag \\
-- \frac{x^2}{c1 (a^2 + x^2)^(3/2)} + \frac{1}{c1 \sqrt{1^2 + x^2}} = y  \notag \\
-y =\frac{1.14688}{c1} > 0
+	\frac{dt}{dx} = \frac{2 \cdot x}{2 \cdot c_1 \cdot \sqrt{a^2 + x^2}} + \frac{-2 \cdot (d-x)}{2 \cdot c_2 \cdot \sqrt{(d-x)^2 + b^2}} \notag \\
+	= \frac{x}{c_1 \cdot \sqrt{a^2 + x^2}} - \frac{(d-x)}{c_2 \cdot \sqrt{(d-x)^2 + b^2}} = 0 
+	\label{snelliusDx}
 \end{align}
-$x_0$ ist lokales Minima, da es auch der einzige Kandidat für eine Extremastelle ist, ist es auch ein globales Minimum.
+
+Da es riesige Terme gibt um $x_0$ in abhängigkeit von den anderen Konstanten der Gleichung auszudrücken wird hier nicht weiter alles berechnet. Der Beweis wird wie folgt durchgeführt.
+In die zweite Ableitung (\eqref{snelliusD2x}) wird das gefundene $x_0$ aus (\eqref{snelliusDx}) eingesetzt. Es wird sich erweisen das es eine Minima stelle ist.
+
+\begin{align}
+\frac{\partial}{\partial x}\left(\frac{x}{\text{c1} \sqrt{a^2+x^2}}-\frac{d-x}{\text{c2} \sqrt{b^2+(d-x)^2}}\right) \notag \\
+=\frac{1}{\text{c1} \sqrt{a^2+x^2}}-\frac{x^2}{\text{c1} \left(a^2+x^2\right)^{3/2}}-\frac{(d-x)^2}{\text{c2} \left(b^2+(d-x)^2\right)^{3/2}}+\frac{1}{\text{c2} \sqrt{b^2+(d-x)^2}}
+\label{snelliusD2x}
+\end{align}
 
 Aus \figref{Ab:brechung} ist gut ersichtlich, dass die Substitutionen \ref{substitution1} und \ref{substitution2} durchgeführt werden können.
 
