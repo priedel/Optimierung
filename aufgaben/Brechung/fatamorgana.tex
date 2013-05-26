@@ -1,18 +1,18 @@
 \section{Berechnungen mittels Euler-Lagrange Gleichung}
 \subsection{Einleitung}
-Einige Probleme lassen sich direkt lösen indem sie in die hergeleitete Euler-Lagrange-Gleichung eingesetzt werden können. Andere Optimierungsprobleme bei denen eine Funktion gesucht wird, können gelöst werden indem sie das Prinzip der Variation von der Euler-Lagrange-Gleichung benutzen, dazu reicht jedoch nicht mehr ein einfaches einsetzen sondern es muss eine neue Gleichung hergeleitet werden. Die gesuchte Funktion wird dann gefunden indem für $g(y)$ und $g'(y)$ konkret $y(x)$ und $y'(x)$ eingesetzt wird. Aber dazu später noch mehr.
+Einige Probleme lassen sich direkt lösen, indem sie in die hergeleitete Euler-Lagrange-Gleichung eingesetzt werden können. Andere Optimierungsprobleme, bei denen eine Funktion gesucht wird, können gelöst werden, indem sie das Prinzip der Variation von der Euler-Lagrange-Gleichung benutzen. Dazu reicht jedoch nicht mehr ein einfaches einsetzen, sondern es muss eine neue Gleichung hergeleitet werden. Die gesuchte Funktion wird dann gefunden, indem für $g(y)$ und $g'(y)$ konkret $y(x)$ und $y'(x)$ eingesetzt wird. Aber dazu später noch mehr.
 
 \subsection{Beschreibung einer Fata Morgana}
 \cite{fataEinleitung}
 Bei der physikalischen Betrachtung der Lichtausbreitung geht man davon aus, dass sich Licht in
 geradlinig verlaufenden Strahlen fortpflanzt. Das Auge erwartet das Objekt, von dem die Lichtstrahlen
-kommen, in rückwärtiger geradliniger Verlängerung der Richtung, die das Licht beim
+kommen, in rückwärtiger geradliniger Verlängerung der Richtung, welche das Licht beim eintreffen in das Auge besitzt.
 
-Wenn das licht ein Medium z.B. mit unterschiedlichen Brechungsindizes durchquert ändert es seine Richtung wie in \secref{brechungsgesetz} gezeigt. Dies erklärt z.B. die verkürzten Beinen im Schwimmbad.
+Wenn das Licht ein Medium, z.B. mit unterschiedlichen Brechungsindizes durchquert, ändert es seine Richtung wie in \secref{brechungsgesetz} gezeigt. Dies erklärt z.B. die verkürzten Beinen im Schwimmbad.
 Eine kompliziertere Situation liegt vor, wenn der Brechungsindex des durch-strahlten Mediums kontinuierlich variiert. 
-Dies ist der Fall, wenn die Luft in der Nähe eines stark aufgeheizten Untergrundes, erwärmt
+Dies ist der Fall, wenn die Luft in der Nähe eines stark aufgeheizten Untergrundes erwärmt
 wird und infolge der dadurch bewirkten Dichteänderung einen räumlichen variierenden Brechungsindex annimmt. 
-Das Licht erfährt ändert stetig seine Richtung, dass führt zu Phänomenen wie Luftspiegelungen an heißen Tagen, oder einer Fata Morgana. 
+Das Licht ändert stetig seine Richtung, dass führt zu Phänomenen wie Luftspiegelungen von Autolichtern oder einer Fata Morgana, an heißen Tagen.
 
 Eintritt in das Auge besitzt. In \figref{Ab:fataEinleitung} wird die Wahrnehmung des Auges und eine Richtungsänderung des Lichtes gezeigt.
 
@@ -60,8 +60,8 @@ Es werden nun die Ableitungen der Funktion \ref{funktionRech} gebraucht. Sie sin
 	\label{ableitungenLag}
 \end{align}
 
-Für die Euler-Lagrange-Gleichung muss man im zweiten Ausdruck für $y$ und $y'$, $y(x)$ 
-und $y'(x)$ einsetzen und nach $\frac{d}{dx}$ ableiten, (\eqref{lagrange1}).
+Für die Euler-Lagrange-Gleichung muss man im zweiten Ausdruck für $y$ und $y'$ die Funktionen $y(x)$ 
+sowie $y'(x)$ einsetzen und nach $\frac{d}{dx}$ ableiten, (\eqref{lagrange1}).
 
 \begin{align}
 	\frac{d}{dx} \frac{\partial F}{\partial y'} = \frac{d}{dx} (g(y(x)) \frac{y'(x)}{\sqrt{1 + y'(x)^2}})
@@ -104,7 +104,7 @@ Der Nenner der rechte Seite ist ebenfalls positiv, daraus resultiert, dass der Z
 \end{align}
 
 Da die zweite Ableitung positiv ist, muss die Funktion des Lichtstrahles konvex sein.
-Dies bedeuted, dass der Lichtstrahl sich über dem Boden nach oben biegt, ganz egal wie die Funktion von $g(x)$ aussieht, solange sie monoton steigend ist.
+Dies bedeutet, dass der Lichtstrahl sich über dem Boden nach oben biegt, ganz egal wie die Funktion von $g(x)$ aussieht, solange sie monoton steigend ist.
 Daraus kann die verallgemeinerte Schlussfolgerung gezogen werden, dass der Lichtstrahl konkav sein muss, wenn die Funktion $g(x)$ monoton fallend ist.
 \begin{definition}
 Ein Lichtstrahl wird in einem inhomogenen Medium in Richtung höherer Dichte gekrümmt, verhält sich die Dichteänderung monoton fallend oder steigend, nimmt der Lichtstrahl eine konvexe oder konkave Kurvenform an.
@@ -114,7 +114,7 @@ Ein Lichtstrahl wird in einem inhomogenen Medium in Richtung höherer Dichte gek
 \subsubsection{Technische Anwendung dieser Erkenntnis}
 In einem Lichtwellenleiter wird dieses Phänomen ausgenutzt, indem die untere Seite des Lichtleiters eine monoton steigende
 und die obere Seite des Lichtleiters eine monoton fallende Funktion ist. 
-Dadurch ist dass Licht dann im Leiter ''gefangen'' und kann nicht über einen Rand hinausgehen.
+Dadurch ist das Licht dann im Leiter ''gefangen'' und kann nicht über einen Rand hinausgehen.
 
 \subsection{Berechnung der Differentialgleichung einer Fata Morgana}
 
