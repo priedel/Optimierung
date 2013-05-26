@@ -5,9 +5,11 @@
 Das Licht legt den Weg vom Startpunkt $P_0$ über den Brechungspunkt $P_1$ 
 nach dem Endpunkt $P_2$ zurück, siehe \figref{Ab:brechung}.
 \begin{figure}[H]
-	\includegraphics[width=0.8\textwidth]{./picture/Brechung.pdf}
+\begin{center}
+	\includegraphics[width=0.7\textwidth]{./picture/Brechung.pdf}
 	\caption{Skizze des Brechungsgesetzes von Snellius}
 	\label{Ab:brechung}
+\end{center}
 \end{figure}
 
 Dadurch kann die zurückgelegte Zeit berechnet werden (\eqref{snelliusT}).
@@ -23,14 +25,7 @@ Wird diese Funktion nach $dx$ abgeleitet und gleich Null gesetzt wird, die Extre
 	\label{snelliusDx}
 \end{align}
 
-Da es riesige Terme gibt um $x_0$ in abhängigkeit von den anderen Konstanten der Gleichung auszudrücken wird hier nicht weiter alles berechnet. Der Beweis wird wie folgt durchgeführt.
-In die zweite Ableitung (\eqref{snelliusD2x}) wird das gefundene $x_0$ aus (\eqref{snelliusDx}) eingesetzt. Es wird sich erweisen das es eine Minima stelle ist.
-
-\begin{align}
-\frac{\partial}{\partial x}\left(\frac{x}{\text{c1} \sqrt{a^2+x^2}}-\frac{d-x}{\text{c2} \sqrt{b^2+(d-x)^2}}\right) \notag \\
-=\frac{1}{\text{c1} \sqrt{a^2+x^2}}-\frac{x^2}{\text{c1} \left(a^2+x^2\right)^{3/2}}-\frac{(d-x)^2}{\text{c2} \left(b^2+(d-x)^2\right)^{3/2}}+\frac{1}{\text{c2} \sqrt{b^2+(d-x)^2}}
-\label{snelliusD2x}
-\end{align}
+Hier wird auf den Beweis das es ein Minima ist verzichtet, da es riesige Terme gibt um $x_0$ in Abhängigkeit von den anderen Konstanten und deren Nebenbedingungen auszudrücken.
 
 Aus \figref{Ab:brechung} ist gut ersichtlich, dass die Substitutionen \ref{substitution1} und \ref{substitution2} durchgeführt werden können.
 
@@ -66,11 +61,6 @@ Wenn $t(x)$ nach $dx$ abgeleitet und gleich 0 gesetzt wird, ergibt sich die Extr
 = \frac{x}{ \sqrt{a^2 + x^2}} - \frac{(d-x)}{ \sqrt{(d-x)^2 + b^2}} = 0 \label{reflexionDx}
 \end{align}
 
-\begin{figure}[H]
-	\includegraphics[width=0.8\textwidth]{./picture/Spiegelung.pdf}
-	\caption{Skizze des Reflexionsgesetzes}
-	\label{Ab:spiegelung}
-\end{figure}
 
 In \figref{Ab:spiegelung} ist ersichtlich, dass die Substitutionen \ref{substitution1} und \ref{substitution2} von \secref{brechungsgesetz} auch hier nützlich sind.
 Nach etwas umformen ergibt sich, dass Eintritts- und Austrittswinkel gleich sind (\eqref{brechung}).
@@ -80,6 +70,15 @@ Nach etwas umformen ergibt sich, dass Eintritts- und Austrittswinkel gleich sind
 0 = \sin(\alpha) - \sin(\beta) \Leftrightarrow \sin(\beta) = \sin(\alpha) \Leftrightarrow\beta = \alpha
 \label{brechung}
 \end{equation}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.7\textwidth]{./picture/Spiegelung.pdf}
+	\caption{Skizze des Reflexionsgesetzes}
+	\label{Ab:spiegelung}
+\end{center}
+\end{figure}
+
 
 In \figref{Ab:spiegelung} ist ersichtlich, dass die Linie des Startpunktes bis zum 
 gespiegelten Endpunkt eine Gerade ist, welche der Funktion des kürzesten Weges entspricht.

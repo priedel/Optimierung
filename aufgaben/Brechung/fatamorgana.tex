@@ -17,9 +17,11 @@ Das Licht ändert stetig seine Richtung, dass führt zu Phänomenen wie Luftspie
 Eintritt in das Auge besitzt. In \figref{Ab:fataEinleitung} wird die Wahrnehmung des Auges und eine Richtungsänderung des Lichtes gezeigt.
 
 \begin{figure}[H]
-	\includegraphics[width=0.4\textwidth]{./picture/FataEinleitung.png}
+\begin{center}
+\includegraphics[width=0.5\textwidth]{./picture/FataEinleitung.png}
 	\caption{Das Auge interpretiert, dass die Lichtstrahlen mit veränderter Richtung aus der tangentialen Verlängerung kommen und sieht dort das Bild}
 	\label{Ab:fataEinleitung}
+\end{center}	
 \end{figure}
 
 
@@ -106,10 +108,10 @@ Der Nenner der rechte Seite ist ebenfalls positiv, daraus resultiert, dass der Z
 Da die zweite Ableitung positiv ist, muss die Funktion des Lichtstrahles konvex sein.
 Dies bedeutet, dass der Lichtstrahl sich über dem Boden nach oben biegt, ganz egal wie die Funktion von $g(x)$ aussieht, solange sie monoton steigend ist.
 Daraus kann die verallgemeinerte Schlussfolgerung gezogen werden, dass der Lichtstrahl konkav sein muss, wenn die Funktion $g(x)$ monoton fallend ist.
-\begin{definition}
+\begin{hilfssatz}
 Ein Lichtstrahl wird in einem inhomogenen Medium in Richtung höherer Dichte gekrümmt, verhält sich die Dichteänderung monoton fallend oder steigend, nimmt der Lichtstrahl eine konvexe oder konkave Kurvenform an.
 \index{Krümmung von Lichtstrahlen}
-\end{definition}
+\end{hilfssatz}
 
 \subsubsection{Technische Anwendung dieser Erkenntnis}
 In einem Lichtwellenleiter wird dieses Phänomen ausgenutzt, indem die untere Seite des Lichtleiters eine monoton steigende
@@ -139,67 +141,3 @@ Wir nehmen in $y$ Richtung eine lineare zunahme der Dichte an. In \eqref{einsetz
 oder mache ich irgend etwas grundsätzlich falsch?
 
 
-\subsection{Fata Morgana Spezifisch}
-
-\begin{figure}[H]
-	\includegraphics[width=0.8\textwidth]{./picture/FataMorgana.pdf}
-	\caption{Skizze der Funktion einer Fata Morgana}
-	\label{Ab:fata}
-\end{figure}
-
-
-Wir nehmen an, wir hätten eine Fata Morgana. 
-Dabei hat der Brechungsindex die Funktion nach \eqref{brechungsindexFunktion} in Abhängigkeit von $y$ 
-(Der Höhe über dem Boden).
-
-\begin{equation}
-	n = n_0 (1 - \varepsilon e^{- \alpha y})
-	\label{brechungsindexFunktion}
-\end{equation}
-
-\texttodo{welcher effekt ist relativ klein?}
-Dabei ist der Effekt relativ klein, da $\epsilon << 1$ ist und 
-die Skalenlänge $\alpha$ in der Grössenordnung von $\alpha = 1 \cdot m^{-1}$ ist.
-Zusätzlich können wir für die Skalierung der x-Richtung die nach \eqref{lichtge} definierte konstante $C$ einführen.
-
-\begin{equation}
-	C = n \frac{dx}{ds}
-	\label{lichtge}
-\end{equation}
-
-Wenn die Strahlengleichung komponentenweise für $r = (y(x), x)$ betrachten wird kann daraus die Strahlengleichung, \eqref{strahlengleichung}, hergeleitet werden.
-
-\begin{equation}
-\frac{d}{ds} \left ( n \frac{dy}{ds} \right ) = \frac{d}{dx} \left ( n \frac{dy}{dx} \frac{dx}{ds} \right ) \frac{dx}{ds} =
-\frac{d}{dx} \left ( C \frac{dy}{dx} \right ) \frac{C}{n} = \frac{\partial n(y)}{\partial y}
-\label{strahlengleichung}
-\end{equation}
-
-Da die Konstante $C$ nur die x-Achse skaliert, wird diese auf den Wert $1$ festgelegt.
-Wegen 
-\texttodo{stimmt diese gleichung? $2 n \partial n / \partial y = \partial n^2 / \partial y$ meiner meinung nach geht da faktor 2 verloren, ist aber schon spät in der Nacht}
-\begin{equation}
-	2 n \partial n / \partial y = \partial n^2 / \partial y \qquad \text{und} \qquad n^2 \simeq n_0^2(1 - 2 \varepsilon e^{-\alpha y}) \notag
-\end{equation}erhalten wir \eqref{difGleich}.
-
-\begin{equation}
-	\frac{d^2 y(x)}{dx^2} = \frac{1}{2} \frac{\partial}{\partial y} n^2(y) = n_0^2 \varepsilon \alpha e^{-\alpha y}
-	\label{difGleich}
-\end{equation}
-
-Diese Gleichung kann mit elementaren Methoden gelöst werden. 
-Zudem wird der Steigungswinkel $\varphi$ eingeführt daraus ergibt sich
-$\kappa = (\frac{\alpha}{2}) \tan(\varphi)$ daraus ergibt sich die übersichtlichere \eqref{fataFunktion}.
-\texttodo{verständlich beschreiben mit zwischen schritten damit sich die diffgleichung und die funktion die gefunden wird ersichtlich sind}
-\begin{equation}
-	y = y_0 + \frac{1}{\alpha} ln(\cosh^2(\kappa(x - x_0))) \xrightarrow{\kappa (x - x_0 ) >> 1} y =	y_0 + \frac{2 \kappa}{\alpha} (x - x_0)
-	\label{fataFunktion}
-\end{equation}
-
-
-In grossen Abständen zum Spiegelpunkt $x_0$ ist die Ausbreitung des Lichtes geradlinig.
-Der Beobachter sieht, wie erwarted zwei Bilder, wobei eines auf dem Kopf steht.
-
-\subsection{Lichtwellenleiter}
-
-Hier kommt das vierte Beispiel.

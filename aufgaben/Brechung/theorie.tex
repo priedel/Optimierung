@@ -4,7 +4,7 @@ Wie in den vorangegangen Kapitel oft gesehen, stehen für Optimierungsprobleme v
 \section{Einleitende Theorie, Fermatsches Prinzip}
 
 Im Jahre 1660 fand Pierre de Fermat, ein Französischer Mathematiker, dass  nach ihm benannte, Fermatsche Prinzip heraus. 
-Dieses lautet wie folgt\cite{Definition}:
+Dieses lautet wie folgt\cite{DefinitionFermat}:
 
 \begin{definition}
 	Der Weg, den das Licht nimmt, 
@@ -49,41 +49,6 @@ kann das Fermatsche Gesetz umformuliert werden\cite{Definition}.
 Der Weg, den das Licht nimmt, um von einem Punkt zu einem anderen zu gelangen, ist stets so, dass der optische Weg minimal ist.
 \index{Fermatsches Prinzip 2}
 \end{definition}
-
-\subsection{Eikonalgleichung}
-\texttodo{ist nicht aus der Eikongleichzung das Fermtische Prinzip abgeleitet?}
-Aus dem Fermatschen Prinzip lässt sich die Eikonalgleichung herleiten.
-Dabei liefert jedes Weglängenstück $ds$ folgenden Beitrag an den optischen Weg $dL$. 
-Dabei ergibt sich \eqref{eikonalHerleitung}.
-
-\begin{equation}
-	dL = n \cdot ds = n e_t \cdot dr
-	\label{eikonalHerleitung}
-\end{equation}
-
-Dabei ist der tangentielle Einheitsvektor der Trajektorie $e_t$ nach  \eqref{et} definiert.
-
-\begin{equation}
-	e_t = \partial r / ds
-	\label{et}
-\end{equation}
-
-Die optische Wegstücke $dL$ können auch wie folgt \texttodo{was definiert werden} definiert werden, 
-und es ergeben sich folgende Gleichungen.
-
-\begin{align}
-	dL = \nabla L \cdot dr \notag \\
-	n e_t = n \frac{dr}{ds} = \nabla L \notag \\
-	n^2 = (\nabla L)^2 \label{eikongleichung}
-\end{align}
-
-\eqref{eikongleichung} nennt sich Eikonalgleichung.
-Durch Ableitung der Eikonalgleichung ergibt sich \eqref{strahlen} die wichtige Strahlengleichung der Optik.
-
-\begin{equation}
-	\frac{d}{ds} \left ( n \frac{dr}{ds} \right ) = \nabla n
-	\label{strahlen}
-\end{equation}
 
 \subsection{Quantenmechanische Erklärung}
 Viele Leute haben ein Problem mit dem Fermatschen Prinzip. 
