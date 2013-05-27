@@ -1,9 +1,9 @@
 \section{Rechnung an einem konkreten Beispiels}
 
 \subsection{Brechungsgesetz von Snellius \label{brechungsgesetz}}
-\cite{Wikipedia} Aus dem Fermatschen Prinzip lässt sich das Brechungsgesetz von Snellius herleiten.
+Aus dem Fermatschen Prinzip lässt sich das Brechungsgesetz von Snellius herleiten.
 Das Licht legt den Weg vom Startpunkt $P_0$ über den Brechungspunkt $P_1$ 
-nach dem Endpunkt $P_2$ zurück, siehe \figref{Ab:brechung}.
+nach dem Endpunkt $P_2$ zurück \cite{Wikipedia}, siehe \figref{Ab:brechung} .
 \begin{figure}[H]
 \begin{center}
 	\includegraphics[width=0.7\textwidth]{./picture/Brechung.pdf}
@@ -18,10 +18,10 @@ t(x) = t_1 + t_2 = \frac{s_1}{c_1} + \frac{s_2}{c_2} = \frac{|P_1 - P_0|}{c_1} +
 = \frac{\sqrt{a^2 + x^2}}{c_1} + \frac{\sqrt{(d-x)^2 + b^2}}{c_2} \label{snelliusT}
 \end{align}
 
-Wird diese Funktion nach $dx$ abgeleitet und gleich Null gesetzt wird, die Extremastelle von $t$ gefunden (\eqref{snelliusDx}).
+Wird die Funktion $t(x)$ nach $x$ abgeleitet und gleich Null gesetzt wird, die Extremastelle von $t$ gefunden (\eqref{snelliusDx}).
 \begin{align}
-	\frac{dt}{dx} = \frac{2 \cdot x}{2 \cdot c_1 \cdot \sqrt{a^2 + x^2}} + \frac{-2 \cdot (d-x)}{2 \cdot c_2 \cdot \sqrt{(d-x)^2 + b^2}} \notag \\
-	= \frac{x}{c_1 \cdot \sqrt{a^2 + x^2}} - \frac{(d-x)}{c_2 \cdot \sqrt{(d-x)^2 + b^2}} = 0 
+	\frac{dt}{dx} = \frac{2 x}{2  c_1  \sqrt{a^2 + x^2}} + \frac{-2  (d-x)}{2  c_2  \sqrt{(d-x)^2 + b^2}} \notag \\
+	= \frac{x}{c_1 \sqrt{a^2 + x^2}} - \frac{(d-x)}{c_2  \sqrt{(d-x)^2 + b^2}} = 0 
 	\label{snelliusDx}
 \end{align}
 
@@ -30,11 +30,11 @@ Hier wird auf den Beweis das es ein Minima ist verzichtet, da es riesige Terme g
 Aus \figref{Ab:brechung} ist gut ersichtlich, dass die Substitutionen \ref{substitution1} und \ref{substitution2} durchgeführt werden können.
 
 \begin{align}
-	\sin(\alpha) &= \frac{x}{\cdot \sqrt{a^2 + x^2}}  \label{substitution1}\\
+	\sin(\alpha) &= \frac{x}{\sqrt{a^2 + x^2}}  \label{substitution1}\\
 	\sin(\beta) &= \frac{d-x}{\sqrt{(d -x)^2 + b^2}} \label{substitution2}
 \end{align}
 
-Nach etwas umformen ergibt sich das Verhältnis der Winkel $\alpha \ \text{und} \ \beta$ gemäss (\eqref{snellius}).
+Nach etwas umformen ergibt sich das Verhältnis der Winkel $\alpha \ \text{und} \ \beta$ gemäss \eqref{snellius}.
 
 \begin{equation}
 	0 = \frac{\sin(\alpha)}{c_1} - \frac{\sin(\beta)}{c_2} \Leftrightarrow\frac{c_2}{c_1} = \frac{\sin(\beta)}{\sin(\alpha)}
@@ -43,10 +43,10 @@ Nach etwas umformen ergibt sich das Verhältnis der Winkel $\alpha \ \text{und} 
 
 
 \subsection{Reflexionsgesetz}
-\cite{Wikipedia} Auf gleiche weise, wie das das Brechungsesetz aus dem Fermatschen Prinzip hergeleitet wird, 
+Auf gleiche weise wie das Brechungsesetz aus dem Fermatschen Prinzip hergeleitet wird, 
 lässt sich daraus auch das Reflexionsgesetz ableiten.
 Das Licht legt den Weg vom Startpunkt $P_0$ über den Spiegelpunkt $P_1$ 
-nach dem Endpunkt $P_2$ zurück. Dadurch kann die zurückgelegte Zeit berechnet werden (\eqref{reflexion}).
+nach dem Endpunkt $P_2$ zurück. Dadurch kann die zurückgelegte Zeit berechnet werden \cite{Wikipedia} (\eqref{reflexion}).
 
 
 \begin{align}
@@ -54,10 +54,10 @@ t(x) = t_1 + t_2 &= \frac{s_1 + s_2}{c} = \frac{|P_1 - P_0| + |P_2 - P_1|}{c} \n
 &= \frac{\sqrt{a^2 + x^2} + \sqrt{(d-x)^2 + b^2}}{c} \label{reflexion}
 \end{align}
 
-Wenn $t(x)$ nach $dx$ abgeleitet und gleich 0 gesetzt wird, ergibt sich die Extremastelle  von $t$ (\eqref{reflexionDx}). Auf den Beweis, dass es ebenfalls ein Minimum ist, wie bei der Reflexion, wird hier verzichtet.
+Wenn $t(x)$ nach $x$ abgeleitet und gleich Null gesetzt wird, ergibt sich die Extremastelle  von $t$ (\eqref{reflexionDx}). Auf den Beweis, dass es ebenfalls ein Minimum ist wie bei der Reflexion wird verzichtet.
 
 \begin{align}
-\frac{dt}{dx} &= \frac{1}{c} \cdot \frac{2 \cdot x}{2 \cdot \sqrt{a^2 + x^2}} + \frac{-2 \cdot (d-x)}{2 \cdot \sqrt{(d-x)^2 + b^2}} \notag \\
+\frac{dt}{dx} &= \frac{1}{c}  \frac{2  x}{2  \sqrt{a^2 + x^2}} + \frac{-2  (d-x)}{2  \sqrt{(d-x)^2 + b^2}} \notag \\
 &= \frac{x}{ \sqrt{a^2 + x^2}} - \frac{(d-x)}{ \sqrt{(d-x)^2 + b^2}} = 0 \label{reflexionDx}
 \end{align}
 

@@ -3,7 +3,7 @@ Wie in den vorangegangen Kapitel oft gesehen, stehen für Optimierungsprobleme v
 
 \section{Einleitende Theorie, Fermatsches Prinzip}
 
-Im Jahre 1660 fand Pierre de Fermat, ein Französischer Mathematiker, dass  nach ihm benannte, Fermatsche Prinzip heraus. 
+Im Jahre 1660 fand Pierre de Fermat, ein Französischer Mathematiker, dass  nach ihm benannte Fermatsche Prinzip heraus. 
 Dieses lautet wie folgt \cite{DefinitionFermat}:
 
 \begin{postulat}
@@ -14,7 +14,7 @@ Dieses lautet wie folgt \cite{DefinitionFermat}:
 \end{postulat}
 
 Die \eqref{fermat} zeigt das Fermatsche Prinzip bei einem Brechungsindex $n$, 
-der Lichtgeschwindigkeit $c$, dem Weg $s$ und dem Ort $r$ Die Zeit muss minimal sein.
+der Lichtgeschwindigkeit $c$, dem Weg $s$ und dem Ort $r$. Die Zeit muss minimal sein.
 
 \begin{align}
 	t= \int\limits_{s_1}^{s_2} \frac{n(r)}{c} ds = \frac{1}{c} \int\limits_{s_1}^{s_2} n(r) ds
@@ -23,13 +23,15 @@ der Lichtgeschwindigkeit $c$, dem Weg $s$ und dem Ort $r$ Die Zeit muss minimal 
 
 
 Wenn die Zeit minimal ist, wird bei kleinen Abweichungen vom Weg die Zeit nicht viel grösser. 
-Deshalb kann die oben stehende Definition auch wie folgt geschrieben werden\cite{Definition}.
+Deshalb kann die oben stehende Definition auch wie folgt geschrieben werden \cite{DefinitionFermat}.
 
 \begin{postulat}
 Der Weg, den das Licht nimmt,  um von einem Punkt zu einem anderen zu gelangen, 
 ist stets so, dass die Zeit, die das Licht benötigt, invariant gegen kleine Änderungen des Weges ist.
 \index{Fermatsches Prinzip 2}
 \end{postulat}
+Genau diese invarianz gegen kleine Änderungen des Weges wurde in \chapref{chapter-variationsrechnung} benutzt um die Euler-Lagrange-Gleichung abzuleiten. Die Herleitung erfolge indem der Weg etwas ''verwackelt'' wurde und dann behauptet wurde, dass sich das Integral nicht ändert.
+
 
 \subsection{Formulierung mit dem optischen Weg}
 Der optische Weg $L$  eines Pfades $s$ kann in einem homogenen Material 
@@ -40,10 +42,9 @@ Bei einem inhomogenen Material ergibt sich für den optischen Pfad die allgemein
 	\label{optischweg}
 \end{align}
 
-Da der zurückgelegte Weg des Lichtstrahles direkt proportional zur Zeit ist, $s = c \cdot t$,
+Da der zurückgelegte Weg des Lichtstrahles direkt proportional zur Zeit ist, $s = c t$,
 und das Licht sich in optisch dichteren Materialien langsamer bewegt,
-kann das Fermatsche Gesetz umformuliert werden\cite{Definition}. 
-
+kann das Fermatsche Gesetz umformuliert werden \cite{DefinitionFermat}. 
 
 \begin{postulat}
 Der Weg, den das Licht nimmt, um von einem Punkt zu einem anderen zu gelangen, ist stets so, dass der optische Weg minimal ist.
