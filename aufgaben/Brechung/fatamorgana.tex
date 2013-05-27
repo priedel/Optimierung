@@ -51,12 +51,8 @@ Um dieses Minimalproblem zu lösen, wird die Euler-Lagrange-Gleichung des Variat
 
 Der Faktor $\frac{1}{c}$ hat keinen Einfluss auf das Integral und somit auch nicht auf das Variationproblem, deshalb kann er weggelassen werden, um ihn nicht ständig mitschleppen zu müssen.
 Es werden nun die Ableitungen der Funktion \ref{funktionRech} gebraucht. Sie sind in \ref{ableitungenLag} aufgeführt.
-\begin{equation}
-	F(x,y,y') = g(y) \sqrt{1 + y'^2}
-	\label{funktionRech}
-\end{equation}
-
 \begin{align}
+	F(x,y,y') &= g(y) \sqrt{1 + y'^2} \label{funktionRech} \\
 	\frac{\partial F}{\partial y} &= g'(y) \sqrt{1 + y'^2} \notag \\
 	\frac{\partial F}{\partial y'} &= g(y) \frac{y'}{\sqrt{1 + y'^2}}
 	\label{ableitungenLag}
@@ -66,17 +62,17 @@ Für die Euler-Lagrange-Gleichung muss man im zweiten Ausdruck für $y$ und $y'$
 sowie $y'(x)$ einsetzen und nach $\frac{d}{dx}$ ableiten, (\eqref{lagrange1}).
 
 \begin{align}
-	\frac{d}{dx} \frac{\partial F}{\partial y'} = \frac{d}{dx} (g(y(x)) \frac{y'(x)}{\sqrt{1 + y'(x)^2}}) =
-	 \notag \\ g'(y(x)) \frac{y'(x)^2}{\sqrt{1 + y'(x)^2}} + g(y(x)) \frac{y''(x)}{\sqrt{1 + y'(x)^2}} -
-	 g'(y(x)) \frac{y'(x)^2 y''(x)}{(1 + y'(x))^\frac{3}{2}} 
+	\frac{d}{dx} \frac{\partial F}{\partial y'} &= \frac{d}{dx} (g(y(x)) \frac{y'(x)}{\sqrt{1 + y'(x)^2}}) \notag \\ 
+	&= g'(y(x)) \frac{y'(x)^2}{\sqrt{1 + y'(x)^2}} + g(y(x)) \frac{y''(x)}{\sqrt{1 + y'(x)^2}}
+	 - g'(y(x)) \frac{y'(x)^2 y''(x)}{(1 + y'(x))^\frac{3}{2}} 
 	 \label{lagrange1}
 \end{align}
 
 Auch im zweiten Term der Euler-Lagrange-Gleichung wird für $y'$ $y'(x)$ eingesetzt. Es ergibt sich \eqref{lagrange2}
 \begin{align}
-	0 = \frac{d}{dx} \frac{\partial F}{\partial y'} - \frac{\partial F}{\partial y} = 
-	g'(y(x)) \frac{y'(x)^2}{\sqrt{1 + y'(x)^2}} + g(y(x)) \frac{y''(x)}{\sqrt{1 + y'(x)^2}} - \notag \\
-	g'(y(x)) \frac{y'(x)^2 y''(x)}{(1 + y'(x)^2)^\frac{3}{2}}  - g'(y(x)) \sqrt{1 + y'(x)^2}
+	0 = \frac{d}{dx} \frac{\partial F}{\partial y'} - \frac{\partial F}{\partial y}
+	= g'(y(x)) \frac{y'(x)^2}{\sqrt{1 + y'(x)^2}} + g(y(x)) \frac{y''(x)}{\sqrt{1 + y'(x)^2}} \notag \\
+	- g'(y(x)) \frac{y'(x)^2 y''(x)}{(1 + y'(x)^2)^\frac{3}{2}}  - g'(y(x)) \sqrt{1 + y'(x)^2}
 	\label{lagrange2}
 \end{align}
 
@@ -142,7 +138,7 @@ In \secref{sec:Krümmung} war die anfangs definiert worden das die Dichte ab dem
 	n'(y)&=m \label{einsetzGl2}
 \end{align}
 
-Um die Differentiation Gleichung zu lösen, kann für $y$ eine hyperbolische Funktion gewählt werden (\eqref{hyperFunk}).
+Um die Differentiation Gleichung zu lösen, kann für $y$ eine hyperbolische Funktion \cite{cosh} gewählt werden (\eqref{hyperFunk}).
 \begin{align}
 	y&=A\cdot\cosh(Bx+C)+D \label{hyperFunk} \\
 	y'&= A\cdot B\cdot sinh(B x + C) \label{hyperFunkDx} \\
@@ -163,11 +159,10 @@ Folgende Annahmen gelten:
 %\end{tabularx}
 
 \begin{align}
-	y_0=y_1=2 m \qquad& Augenhöhe und Startpunkt \\
-	-x_0=x_1 = 200m \qquad& Temperatur Luft auf Augenhöhe \\
-	T_A=333.15 K \qquad& Temperatur des Aspalt \\
-	T_L=293.15 K \qquad& Temperatur Luft auf Augenhöhe \\
-	-x_0=x_1 = 200m \qquad& Temperatur Luft auf Augenhöhe \\
+	y_0&=y_1=2 m & \text{Augenhöhe und Startpunkt} \notag \\
+	-x_0&=x_1 = 200m \qquad& \text{Distanz zum Nullpunkt des Kordinatensystems} \notag \\
+	T_A&=333.15 K & \text{Temperatur des Aspalt}  \notag \\
+	T_L&=293.15 K & \text{Temperatur Luft auf Augenhöhe}  \notag \\
 \end{align}
 
 Daraus ergeben sich mit \eqref{brechTemp} eine Funktion für den Brechungsindex von Luft in abhängigkeit von Temperatur.
