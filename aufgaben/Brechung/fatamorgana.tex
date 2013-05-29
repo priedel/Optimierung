@@ -2,18 +2,18 @@
 \subsection{Einleitung}
 Einige Optimierungsprobleme lassen sich direkt lösen, indem sie in die hergeleitete Euler-Lagrange-Gleichung eingesetzt werden können. Andere Optimierungsprobleme, bei denen eine optimale Funktion gesucht wird, können gelöst werden indem sie das Prinzip der Variation der Euler-Lagrange-Gleichung benutzen. Dazu reicht jedoch nicht mehr ein einfaches einsetzen, sondern es muss eine neue Gleichung hergeleitet werden. Die gesuchte Funktion wird dann gefunden, indem für $g(y)$ und $g'(y)$ konkret $y(x)$ und $y'(x)$ eingesetzt wird. Aber dazu später noch mehr.
 \subsection{Motivation für die Variationsrechnung}
-In \secref{brechungsgesetz} werden einfach geometrische zusammenhänge hergeleitet wenn zwei verschiedene benachbarte Medien einen unterschiedlichen Brechungsindex haben. komplexere Probleme können mit diesen Überlegungen nicht mehr gelöst werden. Der Unterschied liegt darin, dass der Brechungsindex sich kontinuierlich im Raum ändert. In   einem  beliebigen  Medium  ist  der Brechungsindex variabel, eine Funktion $n(x,y)$. Das  Problem wird erst mal nur 2-Dimensional betrachtet. Mit diesen Begebenheiten ist es nicht mehr möglich, eine einfache geometrische Überlegung  zur  Bestimmung  des  Strahles  zu verwenden. der Lichtstrahl wird im allgemeinen gekrümmt sein.
+In \secref{brechungsgesetz} werden einfach geometrische Zusammenhänge hergeleitet, wenn zwei verschiedene benachbarte Medien einen unterschiedlichen Brechungsindex haben. Komplexere Probleme können mit diesen Überlegungen nicht mehr gelöst werden. Der Unterschied liegt darin, dass der Brechungsindex sich kontinuierlich im Raum ändert. In   einem  beliebigen  Medium  ist  der Brechungsindex variabel, eine Funktion $n(x,y)$. Das  Problem wird erst mal nur 2-Dimensional betrachtet. Mit diesen Begebenheiten ist es nicht mehr möglich, eine einfache geometrische Überlegung  zur  Bestimmung  des  Strahles  zu verwenden. der Lichtstrahl wird im allgemeinen gekrümmt sein.
 \subsection{Beschreibung einer Fata Morgana}
 Bei der physikalischen Betrachtung der Lichtausbreitung wird davon ausgegangen, dass sich Licht in
 geradlinig verlaufenden Strahlen fortpflanzt. Das Auge erwartet das Objekt, von dem die Lichtstrahlen
-kommen, in rückwärtiger geradliniger Verlängerung der Richtung, welche das Licht beim eintreffen in das Auge besitzt.
+kommen in rückwärtiger geradliniger Verlängerung der Richtung, welche das Licht beim eintreffen in das Auge besitzt.
 Wenn das Licht ein Medium, z.B. mit unterschiedlichen Brechungsindizes durchquert, ändert es seine Richtung, siehe \secref{brechungsgesetz}. Dies erklärt z.B. die verkürzten Beinen im Schwimmbad.
-Eine kompliziertere Situation liegt vor, wenn der Brechungsindex des durch-strahlten Mediums kontinuierlich variiert. 
+Eine kompliziertere Situation liegt vor, wenn der Brechungsindex des durchstrahlten Mediums kontinuierlich variiert. 
 Dies ist der Fall, wenn die Luft in der Nähe eines stark aufgeheizten Untergrundes erwärmt
 wird und infolge der dadurch bewirkten Dichteänderung einen räumlichen variierenden Brechungsindex annimmt. 
-Das Licht ändert stetig seine Richtung, dass führt zu Phänomenen wie Luftspiegelungen von Autolichtern oder einer Fata Morgana, an heissen Tagen \cite{fataEinleitung}.
+Das Licht ändert stetig seine Richtung, dass führt zu Phänomenen wie Luftspiegelungen von Autolichtern oder einer Fata Morgana an heissen Tagen \cite{fataEinleitung}.
 In \figref{Ab:fataEinleitung} wird die Wahrnehmung des Auges und eine Richtungsänderung des Lichtes gezeigt.
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.55\textwidth]{./picture/FataEinleitung.png}
 	\caption{Das Auge interpretiert, dass die Lichtstrahlen mit veränderter Richtung aus der tangentialen Verlängerung kommen und sieht dort das Bild}
@@ -34,12 +34,12 @@ nehmen wir zuerst nur einmal an, dass die optische Dicht nur von $y$ abhängt un
 $n(x,y) \rightarrow n(y)=g(y)$.
 Durch die geringe Krümmung der Erde kann die $x$ Richtung vernachlässigt werden.
 Dies bedeutet für die Funktion $g(y)$, dass $g(y) > 0$ und $g'(y) > 0 $ ist.
-Um dieses Minimalproblem zu lösen, wird die allgemeine Euler-Lagrange-Gleichung \chapref{chapter-variationsrechnung} \eqref{lagrange-integral} mit Nebenbedingungen aufgestellt (\eqref{krümmung}).
+Um dieses Minimalproblem zu lösen, wird die allgemeine Euler-Lagrange-Gleichung \chapref{chapter-variationsrechnung} \eqref{variation:euler-gleichung}  aufgestellt. (\eqref{krümmung}) ist somit unser vereinfachtes Funktional welches nur noch von $n(y)$ abhängt.
 \begin{equation}
 	T(y) = \int \limits_{x_0}^{x_1} \frac{g(y)}{c} \sqrt{1 + y'(x)^2} dx = \frac{1}{c} \int \limits_{x_0}^{x_1} g(y) \sqrt{1 + y'(x)^2} dx
 	\label{krümmung}
 \end{equation}
-Der Faktor $\frac{1}{c}$ hat keinen Einfluss auf das Integral und somit auch nicht auf das Variationsproblem, deshalb kann er weggelassen werden, um ihn nicht ständig mitschleppen zu müssen.
+Der Faktor $\frac{1}{c}$ hat keinen Einfluss auf das Integral und somit auch nicht auf das Variationsproblem. Deshalb kann er weggelassen werden, um ihn nicht ständig mitschleppen zu müssen.
 Es werden nun die Ableitungen der Funktion \ref{funktionRech} gebraucht. Sie sind in \ref{ableitungenLag} aufgeführt.
 \begin{align}
 	F(x,y,y') &= g(y) \sqrt{1 + y'^2} \label{funktionRech} \\
@@ -62,7 +62,7 @@ Auch im zweiten Term der Euler-Lagrange-Gleichung wird für $y'$, $y'(x)$ einges
 	&- g'(y(x)) \frac{y'(x)^2 y''(x)}{(1 + y'(x)^2)^\frac{3}{2}}  - g'(y(x)) \sqrt{1 + y'(x)^2}
 	\label{lagrange2}
 \end{align}
-Da $\sqrt{1 + y'(x)^2} > 0$ und somit nicht gleich Null is,t kann die Gleichung mit $\sqrt{1 + y'(x)^2}$  multipliziert werden um einen einfacheren Ausdruck zu bekommen, (\eqref{lagrange3}).
+Da $\sqrt{1 + y'(x)^2} > 0$ und somit nicht gleich Null ist kann die Gleichung mit $\sqrt{1 + y'(x)^2}$  multipliziert werden um einen einfacheren Ausdruck zu bekommen, (\eqref{lagrange3}).
 \begin{align}
 	0 = g'(y(x)) y'(x)^2 + g(y(x)) y''(x) - g'(y(x)) \frac{y'(x)^2 y''(x)}{1 + y'(x)^2} - g'(y(x)) (1 + y'(x)^2)
 	\label{lagrange3}
@@ -89,22 +89,21 @@ Ein Lichtstrahl wird in einem inhomogenen Medium in Richtung höherer Dichte gek
 \index{Krümmung von Lichtstrahlen}
 \end{satz}
 \subsubsection{Technische Anwendung dieser Erkenntnis}
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=0.5\textwidth]{./picture/Lichtwellenleiter.pdf}
-	\caption{(a) Lichtwellenleiter mit einer Sprunghaften Änderung der optischen Dichte erzeugt einen am Übergang Reflektierenden Lichtweg. 
-	(b) Lichtwellenleiter mit einer stetig ändernden optischer Dichte erzeugt einen krümmenden Lichtstrahl \cite{opticFibre}. }
-	\label{lichtleiter}
-\end{center}	
-\end{figure}
 In einem Lichtwellenleiter wird dieses Phänomen ausgenutzt, 
 indem  die  optische  Dichte  eines  zylindrischen
 Lichtwellenleiters  von  der Achse zum Mantel hin abnimmt.
 So werden die Lichtstrahlen immer vom Mantel weggekrümmt 
 und das Licht  bleibt im Leiter gefangen (\figref{lichtleiter}).
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{./picture/Lichtwellenleiter.pdf}
+	\caption{(a) Lichtwellenleiter mit einer Sprunghaften Änderung der optischen Dichte erzeugt einen am Übergang reflektierenden Lichtweg. 
+	(b) Lichtwellenleiter mit einer stetig ändernder optischer Dichte erzeugt einen krümmenden Lichtstrahl \cite{opticFibre}. }
+	\label{lichtleiter}
+\end{center}	
+\end{figure}
 \subsection{Berechnung der Differentialgleichung einer Fata Morgana \label{sec:diffgleichung}}
-Für die gesuchte Differentialgleichung der Fata Morgana nehmen wir wie bei der Krümmung an, dass die optische Dichtung nur von $y$ abhängt. 
-$n(y) = g(y)$ und mit zunehmenden $y$ zunimmt. Dies bedeutet wie für die Funktion $g(y)$ wie in \secref{sec:Krümmung}, dass $g(y) > 0$ und $g'(y) > 0 $ ist.
+Für die gesuchte Differentialgleichung der Fata Morgana nehmen wir wie bei der Krümmung an, dass die optische Dichtung nur von $y$ abhängt ($n(y) = g(y)$) und mit zunehmenden $y$ zunimmt. Dies bedeutet, wie für die Funktion $g(y)$ wie in \secref{sec:Krümmung}, dass $g(y) > 0$ und $g'(y) > 0 $ ist.
 Die Euler-Lagrange-Gleichung wird gleich wie in \secref{sec:Krümmung} berechnet. Bei \eqref{lagrange4} wird weiter gerechnet. In \eqref{diffgleichung1} werden alle Terme auf die linke Seite genommen.
 \begin{align}
 	g(y(x) y''(x)-g'(y(x) y'(x)^2 - g'(y(x)) =0 
@@ -116,7 +115,7 @@ Dabei ist $g(y(x))$ die gesuchte Funktion des Brechungsindex $n(y)$. Mit dieser 
 	n y''-n' (y')^2 - n' =0 
 	\label{diffgleichung2}
 \end{align}
-In \secref{sec:Krümmung} war anfangs definiert worden das die Dichte ab dem Boden in Richtung $y$ zunimmt weil die Temperatur über dem Boden von dem heissen Untergrund mehr erhitzt ist als in höheren Lagen. Wird jetzt diese Temperaturabnahme als linear angenommen, gilt \eqref{einsetzGl1} und deren Ableitung \eqref{einsetzGl2}.
+In \secref{sec:Krümmung} war anfangs definiert worden, dass die Dichte ab dem Boden in Richtung $y$ zunimmt, weil die Temperatur über dem Boden von dem heissen Untergrund mehr erhitzt ist als in höheren Lagen. Wird jetzt diese Temperaturabnahme als linear angenommen, gilt \eqref{einsetzGl1} und deren Ableitung \eqref{einsetzGl2}.
 \begin{align}
 	n(y)&=my+b \label{einsetzGl1} \\
 	n'(y)&=m \label{einsetzGl2}
@@ -132,16 +131,16 @@ Um die Differentiation Gleichung zu lösen, kann für $y$ eine hyperbolische Fun
 Folgende Annahmen gelten:
 \begin{align}
 	y_0&=y_1=2 m & \text{Augenhöhe und Startpunkt} \notag \\
-	-x_0&=x_1 = 200m & \text{Distanz zum Nullpunkt des Kordinatensystems} \notag \\
-	T_A&=333.15 K & \text{Temperatur des Aspalt}  \notag \\
+	-x_0&=x_1 = 200m & \text{Distanz zum Nullpunkt des Koordinatensystems} \notag \\
+	T_A&=333.15 K & \text{Temperatur des Asphalt}  \notag \\
 	T_L&=293.15 K & \text{Temperatur Luft auf Augenhöhe}  \notag
 \end{align}
-Daraus ergeben sich mit \eqref{brechTemp} eine Funktion für den Brechungsindex von Luft in abhängigkeit von Temperatur.
+Daraus ergeben sich mit \eqref{brechTemp} eine Funktion für den Brechungsindex von Luft in Abhängigkeit von Temperatur.
 \begin{align}
 	n=1+0.000293\frac{T_0}{T}
 	\label{brechTemp}
 \end{align}
-Daraus ergeben sich die werte in \eqref{nParam} für unsere lineare gleichung $n(y)=my+b$
+Daraus ergeben sich die Werte in \eqref{nParam} für unsere lineare Gleichung $n(y)=my+b$
 \begin{align}
 	y&=y_0=y_1 \notag \\
 	b&=n_A=1+0.000293\frac{273.15 K}{333.15 K} = 1.00024 \notag \\
@@ -155,7 +154,7 @@ Als erstes die allgemeine Form mit einsetzen von $n,n',y',y''$ (\eqref{HauptGl})
 	(my_0+b)A B^2 cosh(B x_0 + C)-m (A B sinh(B x_0 + C))^2-m &= 0\notag \\
 	(my_1+b)A B^2 cosh(B x_1 + C)-m (A B sinh(B x_1 + C))^2-m &=0 \label{HauptGl}
 \end{align}
-Da wir mit $-x_0=x_1$ eine Achsenspieglung haben und die Cosinus Hyperbolicus Funktion eine gerade Funktion ist, lässt sich (\eqref{HauptGl}) vereinfachen (\eqref{glvereinfacht}). Dabei wird $C$ weggelassen.
+Da wir mit $-x_0=x_1$ eine Achsenspiegelung haben und die Cosinus Hyperbolicus Funktion eine gerade Funktion ist, lässt sich (\eqref{HauptGl}) vereinfachen (\eqref{glvereinfacht}). Dabei wird $C$ weggelassen.
 \begin{align}
 	(my_0+b)A B^2 cosh(B x_0 )-m (A B sinh(B x_0 ))^2-m &= 0\notag \\
 	(my_1+b)A B^2 cosh(B x_1 )-m (A B sinh(B x_1 ))^2-m &=0 \label{glvereinfacht}
@@ -164,4 +163,4 @@ Da wir mit $-x_0=x_1$ eine Achsenspieglung haben und die Cosinus Hyperbolicus Fu
  \eqref{hyperFunk}  ist nicht linear, deshalb muss ab hier mit numerischen Methoden weitergearbeitet werden.
  
  \subsection{Schlussfolgerungen}
- Die Erkenntnis das für $y$ eine Hyperbolische Funktion resultiert und das eine Differentialgleichung für beliebige Funktionen für $n$ eingesetzt werden können ist beachtlich. Die Variationsrechnung ist sehr mächtig, es können allgemeine Eigenschaften die nicht Funktionsabhängig sind abgeleitet werden (\secref{sec:Krümmung}). Es können auch nicht triviale Differentialgleichungen hergeleitet werden (\secref{sec:diffgleichung}). Wenn ein Problem nicht direkt mit der Euler-Lagrange-Gleichung gelöst werden kann, kann das Prinzip des etwas ''verwackeln'' und der Annahme, dass sich das Integral nicht ändert trotzdem angewendet werden. Es muss dann eine neue Gleichung hergeleitet werden welche danach wieder wie bei der Euler-Lagrange-Gleichung nach $\frac{d}{dx}$ (\eqref{lagrangePrinzip}) abgeleitet wird.
+ Die Erkenntnis das für $y$ eine Hyperbolische Funktion resultiert und das eine Differentialgleichung für beliebige Funktionen für $n$ eingesetzt werden können ist beachtlich. Die Variationsrechnung ist sehr mächtig, es können allgemeine Eigenschaften die nicht Funktionsabhängig sind abgeleitet werden (\secref{sec:Krümmung}). Es können auch nicht triviale Differentialgleichungen hergeleitet werden (\secref{sec:diffgleichung}). Wenn ein Problem nicht direkt mit der Euler-Lagrange-Gleichung gelöst werden kann, kann das Prinzip des etwas ''verwackeln'' und der Annahme, dass sich das Integral nicht ändert, oft trotzdem angewendet werden. Es muss dann eine neue Gleichung hergeleitet werden, welche danach wieder auf die Euler-Lagrange-Gleichung zurückzuführen ist (\chapref{chapter-variationsrechnung} \eqref{variation:euler-gleichung}).
