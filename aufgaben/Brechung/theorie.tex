@@ -1,38 +1,28 @@
 \section{Einleitung}
 Wie in den vorangegangen Kapitel oft gesehen, stehen für Optimierungsprobleme verschiedene Programme wie z.B. der Symplex Algorithmus zur Verfügung. Dabei wird ein Maxima oder Minima gesucht. Bei der Variationsrechnung wird, wie in \chapref{chapter-variationsrechnung} beschrieben, eine Funktion gesucht welche, das Optimierungsproblem löst. Für die Variationsrechnung steht anstelle eines mathematischen Programms die Euler-Lagrange-Gleichung zur Verfügung. Wie nützlich und mächtig sie ist, soll anhand von Beispielen in folgenden Seiten etwas aufgezeigt werden.
-
 \section{Einleitende Theorie, Fermatsches Prinzip}
-
 Im Jahre 1660 fand Pierre de Fermat, ein Französischer Mathematiker, dass  nach ihm benannte Fermatsche Prinzip heraus. 
 Dieses lautet wie folgt \cite{DefinitionFermat}:
-
 \begin{postulat}
 	Der Weg, den das Licht nimmt, 
 	um von einem Punkt zu einem anderen zu gelangen, 
 	ist stets so, dass die benötigte Zeit minimal ist.
 	\index{Fermatsches Prinzip 1}
 \end{postulat}
-
 Die \eqref{fermat} zeigt das Fermatsche Prinzip bei einem Brechungsindex $n$, 
 der Lichtgeschwindigkeit $c$, dem Weg $s$ und dem Ort $r$. Die Zeit muss minimal sein.
-
 \begin{align}
 	t= \int\limits_{s_1}^{s_2} \frac{n(r)}{c} ds = \frac{1}{c} \int\limits_{s_1}^{s_2} n(r) ds
 	\label{fermat}
 \end{align}
-
-
 Wenn die Zeit minimal ist, wird bei kleinen Abweichungen vom Weg die Zeit nicht viel grösser. 
 Deshalb kann die oben stehende Definition auch wie folgt geschrieben werden \cite{DefinitionFermat}.
-
 \begin{postulat}
 Der Weg, den das Licht nimmt,  um von einem Punkt zu einem anderen zu gelangen, 
 ist stets so, dass die Zeit, die das Licht benötigt, invariant gegen kleine Änderungen des Weges ist.
 \index{Fermatsches Prinzip 2}
 \end{postulat}
-Genau diese invarianz gegen kleine Änderungen des Weges wurde in \chapref{chapter-variationsrechnung} benutzt um die Euler-Lagrange-Gleichung abzuleiten. Die Herleitung erfolge indem der Weg etwas ''verwackelt'' wurde und dann behauptet wurde, dass sich das Integral nicht ändert.
-
-
+Genau diese Invarianz gegen kleine Änderungen des Weges wurde in \chapref{chapter-variationsrechnung} benutzt um die Euler-Lagrange-Gleichung abzuleiten. Die Herleitung erfolge indem der Weg etwas ''verwackelt'' wurde und dann behauptet wurde, dass sich das Integral nicht ändert.
 \subsection{Formulierung mit dem optischen Weg}
 Der optische Weg $L$  eines Pfades $s$ kann in einem homogenen Material 
 mit dem Brechungsindex $n$ als Produkt von $n$ und $s$ berechnet werden.
@@ -41,16 +31,13 @@ Bei einem inhomogenen Material ergibt sich für den optischen Pfad die allgemein
 	L(s) = \int\limits_{s_1}^{s_2} n(r) \,\mathrm d\vec s 
 	\label{optischweg}
 \end{align}
-
 Da der zurückgelegte Weg des Lichtstrahles direkt proportional zur Zeit ist, $s = c t$,
 und das Licht sich in optisch dichteren Materialien langsamer bewegt,
 kann das Fermatsche Gesetz umformuliert werden \cite{DefinitionFermat}. 
-
 \begin{postulat}
 Der Weg, den das Licht nimmt, um von einem Punkt zu einem anderen zu gelangen, ist stets so, dass der optische Weg minimal ist.
 \index{Fermatsches Prinzip 2}
 \end{postulat}
-
 \subsection{Erklärung}
 Viele Leute haben ein Problem mit dem Fermatschen Prinzip. 
 Der Grund ist ganz einfach. 
